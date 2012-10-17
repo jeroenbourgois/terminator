@@ -29,11 +29,16 @@ task :install do
   system("curl -s -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh")
   system("rm -rf ~/.oh-my-zsh/custom")
   system("git clone git@github.com:jeroenbourgois/zsh.git ~/.oh-my-zsh/custom")
+
+  Rake::Task['link'].invoke
 end
 
 desc "Hook our dotfiles into system-standard positions."
 task :link do
+  puts 'linking'
+  Dir.chdir("#{ENV["HOME"]}/.oh-my-zsh/")
   linkables = Dir.glob('*/**{.symlink}')
+  puts linkables
 
   skip_all = false
   overwrite_all = false

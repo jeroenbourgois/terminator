@@ -6,10 +6,14 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git system)
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
 
 # Colors for ls and autocompletion
-eval $( dircolors -b $ZSH_CUSTOM/LS_COLORS )
+eval $( gdircolors -b $ZSH_CUSTOM/LS_COLORS )
 zstyle ':completion:*:default'            list-colors ${(s.:.)LS_COLORS}
 
 source $ZSH/oh-my-zsh.sh

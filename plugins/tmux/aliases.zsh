@@ -1,5 +1,3 @@
-#!/bin/sh
-
 alias t="tmux"
 alias tkill="tmux kill-server"
 
