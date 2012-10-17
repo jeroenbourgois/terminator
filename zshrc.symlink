@@ -6,7 +6,10 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git system)
+plugins=(git)
+
+# load my personal stuff
+for config_file ($ZSH/custom/**/*.zsh) source $config_file
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
