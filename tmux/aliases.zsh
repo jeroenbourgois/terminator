@@ -1,7 +1,6 @@
-alias t="tmux"
+alias t="tmux -u"
 alias tkill="tmux kill-server"
 
-alias t='tmux'
 alias t-a='t attach-session -t $@'
 
 function tt() {
