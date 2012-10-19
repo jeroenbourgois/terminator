@@ -21,7 +21,7 @@ compinit
 zstyle ':completion:*:default'            list-colors ${(s.:.)LS_COLORS}
 
 # let the system know about my editor
-set EDITOR=vim
+export EDITOR=vim
 
 source $ZSH/oh-my-zsh.sh
 
