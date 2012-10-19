@@ -36,8 +36,8 @@ end
 desc "Hook our dotfiles into system-standard positions."
 task :link do
   puts 'linking'
-  Dir.chdir("#{ENV["HOME"]}/.oh-my-zsh/")
-  linkables = Dir.glob('*/**{.symlink}')
+  Dir.chdir("#{ENV["HOME"]}/.oh-my-zsh/custom")
+  linkables = Dir.glob('**/**{.symlink}')
   puts linkables
 
   skip_all = false
