@@ -1,1 +1,1 @@
-alias gca='git commit -v -a -m'
+alias gcam='git commit -v -a -m $1'
