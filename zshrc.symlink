@@ -25,5 +25,8 @@ export EDITOR=vim
 
 source $ZSH/oh-my-zsh.sh
 
+# set the shell
+export SHELL=/bin/zsh
+
 # Customize to your needs...
 export PATH=/Users/jeroenb/.rbenv/versions/1.9.3-p125/bin:/Users/jeroenb/.rbenv/libexec:/Users/jeroenb/.rbenv/plugins/ruby-build/bin:/Users/jeroenb/pear/bin:/Users/jeroenb/local/node/bin:/Users/jeroenb/local/node/bin/npm:/Users/jeroenb/.terminator/bin:/usr/share/aclocal/dirlist:/usr/local/share/aclocal:/usr/local/share/python:/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:/Users/jeroenb/.rbenv/shims:/Users/jeroenb/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
