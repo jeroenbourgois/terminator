@@ -7,18 +7,20 @@ set-option -g default-terminal "screen-256color"
 # Nice titles
 set-option -g set-titles on
 
+# OSX Specific
+if-shell 'test "$(uname)" = "Darwin"' 'source $ZSH/custom/tmux/osx.conf'
+
 # remap prefix to Ctrl-a instead of Ctrl-b
+set-option -g prefix C-z
 unbind C-b
-set -g prefix C-a
+bind C-z send-prefix
 
 # Allow C-A a to send C-A to application. Useful for Vim, other apps
 bind C-a send-prefix
 
 # Reload the .tmux.conf file with Ctrl-r
+unbind r
 bind-key r source-file ~/.tmux.conf \; display-message "Configuration reloaded"
-
-# Start Window Numbering at 1
-set -g base-index 1
 
 # Rather than constraining window size to the maximum size of any client 
 # connected to the *session*, constrain window size to the maximum size of any 
@@ -27,24 +29,6 @@ setw -g aggressive-resize on
 
 # Highlight active window
 set-window-option -g window-status-current-bg red
-
-# Status bar
-set -g status-left-length 32
-set -g status-right-length 150
-
-set -g status-fg white
-set -g status-bg colour234
-set -g window-status-activity-attr bold
-set -g pane-border-fg colour245
-set -g pane-active-border-fg colour39
-set -g message-fg colour16
-set -g message-bg colour221
-set -g message-attr bold
-
-set -g status-left '#[fg=colour235,bg=colour252,bold] ❐ #S #[fg=colour252,bg=colour238,nobold]⮀#[fg=colour245,bg=colour238,bold] #(whoami) #[fg=colour238,bg=colour234,nobold]⮀'
-set -g window-status-format "#[fg=white,bg=colour234] #I #W "
-set -g window-status-current-format "#[fg=colour234,bg=colour39]⮀#[fg=colour25,bg=colour39,noreverse,bold] #I ⮁ #W #[fg=colour39,bg=colour234,nobold]⮀"
-set -g status-right "#(date)"
 
 # Sane mouse scrolling
 set -g mode-mouse on
@@ -56,6 +40,7 @@ bind l select-pane -R
 bind h select-pane -L
 
 # Rebinding the pane splitting bindings  | and - 
+unbind %
 bind | split-window -h
 bind - split-window -v
 
@@ -79,17 +64,27 @@ set-option -g default-shell $SHELL
 # Sync panes - send what you're typing to other panes.
 bind C-s set-window-option synchronize-panes
 
-# OSX Clipboard support
+# Status
+set-option -g status-interval 1
 
-# source ~/.tmux.clipboard
-bind C-v run "tmux set-buffer $(reattach-to-user-namespace pbpaste); tmux paste-buffer"
-bind C-c run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+set -g status-left-length 32
+set -g status-right-length 150
 
-# # Linux clipboard support
-bind C-p run "tmux set-buffer \"$(xclip -o -selection clipboard)\"; tmux paste-buffer" 
-bind C-y run "tmux save-buffer - | xclip -i -selection clipboard"
+set -g status-fg white
+set -g status-bg colour234
 
-set-option -g default-command 'reattach-to-user-namespace -l zsh'
+set -g window-status-activity-attr bold
 
-# check osx shell
-# if-shell 'test "$(uname)" = "Darwin"' 'source $ZSH/custom/tmux/osx.conf'
+set -g pane-border-fg colour245
+set -g pane-active-border-fg colour39
+
+set -g message-fg colour16
+set -g message-bg colour221
+set -g message-attr bold
+
+set -g status-left '#[fg=colour235,bg=colour252,bold] ❐ #S #[fg=colour252,bg=colour234,nobold]⮀'
+
+set -g window-status-format "#[fg=white,bg=colour234] #I #W "
+set -g window-status-current-format "#[fg=colour234,bg=colour39]⮀#[fg=colour25,bg=colour39,noreverse,bold] #I ⮁ #W #[fg=colour39,bg=colour234,nobold]⮀"
+
+set -g status-right '#[fg=colour234,bg=colour148]⮀#[fg=colour22,bg=colour148,noreverse,bold]#($ZSH/custom/tmux/segments/cpu) #[fg=colour148,bg=colour238,nobold]⮀#[fg=colour245,bg=colour238,bold] #($ZSH/custom/tmux/segments/date) #[fg=colour238,bg=colour234,nobold]⮀#[fg=colour245,bg=colour234,bold] #(whoami)@#(hostname -s) #[fg=colour234,bg=colour238,nobold]⮀ '
