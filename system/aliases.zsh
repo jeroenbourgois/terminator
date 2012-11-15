@@ -130,3 +130,7 @@ alias sppr="spotify previous"
 ###############################################################################
 
 alias barbuda="ssh ubuntu@ec2-54-245-3-123.us-west-2.compute.amazonaws.com"
+
+# selenium
+#
+alias selnium="java -jar /usr/local/bin/selenium-server-standalone-2.25.0.jar"
