@@ -11,14 +11,14 @@ function tt() {
   echo $sn
 
   # This will also be the default cwd for new windows created
-  tmux new-session -d -s "$sn" 'reattach-to-user-namespace -l zsh'
+  t new-session -d -s "$sn" 'reattach-to-user-namespace -l zsh'
 
   # New window
-  tmux new-window -t "$sn:2" 'reattach-to-user-namespace -l mutt'
+  t new-window -t "$sn:2" 'reattach-to-user-namespace -l mutt'
 
   # Select window #1 and attach to the session
-  tmux select-window -t "$sn:1"
-  tmux -2 attach-session -t "$sn"
+  t select-window -t "$sn:1"
+  t -2 attach-session -t "$sn"
 }
 
 # for tmux: export 256color
