@@ -30,8 +30,8 @@ set-option -g   pane-active-border-fg red
 set-option -g   pane-border-bg default
 set-option -g   pane-border-fg cyan
 set-option -g   repeat-time 500
-set-option -g   visual-activity off
-set-option -g   visual-bell on
+# set-option -g   visual-activity off
+# set-option -g   visual-bell on
 set-option -g   set-titles on
 set-option -g   set-titles-string ' #I-#W '
 set-option -g   terminal-overrides 'xterm*:smcup@:rmcup@'
@@ -80,7 +80,7 @@ set-window-option -g clock-mode-colour blue
 set-window-option -g clock-mode-style 24
 set-window-option -g monitor-activity on
 set-window-option -g xterm-keys on
-set-window-option -g automatic-rename on
+# set-window-option -g automatic-rename on
 # set-window-option -g aggressive-resize off
 #
 set-window-option -g window-status-format ' #I-#W '

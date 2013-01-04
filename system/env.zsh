@@ -1,6 +1,6 @@
 export HISTCONTROL=erasedups # Erase duplicates
 export HISTCONTROL=ignoreboth # Ignore same sucessive entries.
-export HISTSIZE=6000 # resize history size
+export HISTSIZE=12000 # resize history size
 
 if [[ $CURRENT_SHELL == 'bash' ]]; then
   shopt -s histappend # append to bash_history if Terminal.app quits
