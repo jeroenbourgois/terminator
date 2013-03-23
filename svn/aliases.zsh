@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# colours are souces in ~/.zshrc (or ~/.oh-my-zsh/custom.zshrc.symlink)
+source $ZSH/custom/system/colors.zsh
 
 alias svns='echo -e "${COLOR_BLUE} » svn status ${COLOR_RESET}"; svn st'
 alias svnc='echo -e "${COLOR_YELLOW} » svn commit -m ${COLOR_RESET}"; svn commit -m "$@"'
