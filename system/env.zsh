@@ -37,7 +37,7 @@ export PATH
 
 export CLICOLOR=1;
 
-export TZ='Europe/Brussels'; 
+export TZ='Europe/Brussels';
 
 export LANGUAGE="en_US.UTF-8"
 export LANG="C"

@@ -23,7 +23,7 @@ alias hidden-hide='defaults write com.apple.finder AppleShowAllFiles -bool false
 
 alias cwd='pwd | pbcopy' # copy current working directory to clipboard
 
-alias hosts='sudo vi /etc/hosts'   
+alias hosts='sudo vi /etc/hosts'
 
 alias fasterfaster='sudo rm -rf /private/var/log/asl/*; sudo rm -rf /var/mail/*'
 
@@ -55,10 +55,10 @@ alias jacke='echo $jackip'
 
 alias screen='export SCREENPWD=$(pwd); /usr/bin/screen -U'
 
-case "$TERM" in 
+case "$TERM" in
     'screen')
          cd $SCREENPWD
-         ;; 
+         ;;
 esac
 
 # Terminator / ZSH
@@ -67,6 +67,7 @@ esac
 alias profile='vim ~/.zshrc'
 alias terminator='cd ~/.oh-my-zsh/custom | vim'
 alias terminatore='. ~/.oh-my-zsh/custom | vim zshrc.symlink'
+# alias zhsc='cd ~/.oh-my-zsh/custom | vim'
 
 # apache
 ###############################################################################
@@ -131,5 +132,6 @@ alias sppr="spotify previous"
 alias barbuda="ssh ubuntu@ec2-54-245-3-123.us-west-2.compute.amazonaws.com"
 
 # selenium
-#
+###############################################################################
+
 alias selenium="java -jar /usr/local/bin/selenium-server-standalone-2.25.0.jar"
