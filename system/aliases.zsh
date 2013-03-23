@@ -32,7 +32,7 @@ alias hist-sort='history | cut -c 8- | sort | uniq -c | sort -rn'
 
 alias fixfonts='atsutil databases -removeUser | atsutil server-shutdown | atsutil server -ping'
 
-alias reload!='source ~/.bash_profile'
+alias reload!='exec $SHELL'
 
 # folders
 ###############################################################################
@@ -61,13 +61,12 @@ case "$TERM" in
          ;; 
 esac
 
-# Terminator
+# Terminator / ZSH
 ###############################################################################
 
-alias profile='vim ~/.terminator'
-alias profilec='. ~/.bash_profile'
-alias terminator='cd ~/.terminator | vim .'
-alias terminatore='. ~/.bash_profile'
+alias profile='vim ~/.zshrc'
+alias terminator='cd ~/.oh-my-zsh/custom | vim'
+alias terminatore='. ~/.oh-my-zsh/custom | vim zshrc.symlink'
 
 # apache
 ###############################################################################
@@ -75,7 +74,7 @@ alias terminatore='. ~/.bash_profile'
 alias apache-start='sudo apachectl start'
 alias apache-restart='sudo apachectl restart'
 alias apache-stop='sudo apachectl stop'
-alias apache-vhosts='sudo vim /etc/apache2/other/httpd-vhosts.conf'
+alias apache-vhosts='sudo vim /etc/apache2/extra/httpd-vhosts.conf'
 alias apache-conf='sudo vim /etc/apache2/httpd.conf'
 
 alias mysql-start='mysql.server start'

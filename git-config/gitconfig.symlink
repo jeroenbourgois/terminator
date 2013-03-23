@@ -23,6 +23,6 @@
 	changed = yellow bold
 	untracked = red
 
-[core]
-	editor = /usr/bin/vim
+; [core]
+; 	editor = /usr/bin/vim
 
