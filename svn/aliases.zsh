@@ -7,5 +7,5 @@ alias svnc='echo -e "${COLOR_YELLOW} » svn commit -m ${COLOR_RESET}"; svn commi
 alias svnu='echo -e "${COL_BLUE} » svn up ${COLOR_RESET}"; svn up '
 alias svnl='echo -e "${COL_YELLOW} » svn log -l 5 ${COLOR_RESET}"; svn log -l 5'
 
-alias svn-status-all='~/.terminator/svn/bin/svnstatus.py $@'
-alias svn-up-all='~/.terminator/svn/bin/svnup.py $@'
+alias svn-status-all='$ZSH/svn/bin/svnstatus.py $@'
+alias svn-up-all='$ZSH/svn/bin/svnup.py $@'
