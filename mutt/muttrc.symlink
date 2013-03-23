@@ -1,0 +1,62 @@
+#account settings
+set from="info@jeroenbourgois.be"
+set realname = "Jeroen Bourgois"
+set imap_user = "info@jeroenbourgois.be"
+set imap_pass = "kezrtczriqqwbwmx"
+set smtp_url = "smtp://info@jeroenbourgois.be@smtp.gmail.com:587"
+set smtp_pass = "kezrtczriqqwbwmx"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+
+set sendmail="/usr/local/bin/msmtp"
+
+set move=no  #Stop asking to "move read messages to mbox"!
+set imap_keepalive=900
+bind index G imap-fetch-mail
+bind pager G imap-fetch-mail
+set mail_check=50
+set timeout=60
+
+# Header related stuff
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+
+ignore *
+unignore from: date subject to cc
+unignore x-mailing-list: posted-to:
+unignore x-mailer:
+
+# Sorting, Markers etc.
+set markers=no # don't put '+' at the beginning of wrapped lines
+set pager_index_lines= 10 # how large is the index window?
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+
+# Set which Editor to use for composing Emails.
+set editor="/usr/bin/vim -c 'set tw=70 et' '+/^$' "
+set edit_headers=yes # See the headers when editing
+
+# make mutt colorful!
+color attachment brightmagenta  default
+color error      brightred      default
+color hdrdefault red            default
+color indicator  default        default
+color markers    brightcyan     default
+color message    brightcyan     default
+color normal     brightblack    default
+color quoted     brightblue     default
+color search     default        green
+color signature  red            default
+color status     white         black
+color tilde      magenta        default
+color tree       magenta        default
+color index      brightgreen    default ~N # color for new messages
+
