@@ -1,3 +1,5 @@
+#!/bin/sh
+
 source $ZSH_CUSTOM/system/colors.zsh
 
 alias gap='git add -p'

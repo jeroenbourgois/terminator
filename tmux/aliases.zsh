@@ -1,3 +1,5 @@
+#!/bin/sh
+
 alias t='tmux'
 alias tk='tmux kill-server'
 alias ta='t attach-session -t $@'

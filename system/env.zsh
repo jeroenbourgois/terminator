@@ -1,3 +1,5 @@
+#!/bin/sh
+
 export HISTCONTROL=erasedups # Erase duplicates
 export HISTCONTROL=ignoreboth # Ignore same sucessive entries.
 export HISTSIZE=12000 # resize history size
