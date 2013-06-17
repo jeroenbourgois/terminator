@@ -120,14 +120,6 @@ alias r='rails'
 
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc $1'
 
-# spotify
-###############################################################################
-
-alias spotify="osascript ~/.terminator/bin/spotify.scpt"
-alias spn="spotify next"
-alias spp="spotify pause"
-alias sppr="spotify previous"
-
 # barbuda Amazon EC2
 ###############################################################################
 
