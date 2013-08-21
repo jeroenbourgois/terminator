@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+wget -N --quiet https://raw.github.com/pierot/server-installer/master/lib.sh; . ./lib.sh
+
+_print_h1 "Export Engine"
+
+###############################################################################
+
+if [ -z "$1" ]; then
+  now=`date`
+  target_dir=`date -j -f "%a %b %d %T %Z %Y" "$now" "+%s"`
+
+  _print_h2 "No target given, exporting to ./$target_dir"
+fi
+
+if [ -z "$target_dir" ]; then
+  target_dir=$1
+
+  _print_h2 "Exporting to ./$target_dir"
+fi
+
+###############################################################################
+
+target_dir=./$target_dir
+
+if [ -d "$target_dir" ]; then
+  _error 'Target directory already exists'
+
+  exit 0
+fi
+
+###############################################################################
+
+_print_h2 "Cloning repo"
+
+git clone -q git@github.com:proximitybbdo/engine.git $target_dir
+cd $target_dir
+
+_print_h2 "Init git submodules"
+
+git submodule init --quiet
+
+_print_h2 "Update git submodules"
+
+git submodule update --quiet
+
+_print_h2 "Removing all unnecessary files"
+
+targets=(.git .gitmodules)
+
+for i in "${targets[@]}"; do
+  find . -name $i | xargs rm -rf $
+done
+
+targets=(export.sh README.md build.xml)
+
+for i in "${targets[@]}"; do
+  rm $i
+done
+
+_print_h2 "Done"

@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+wget -N --quiet https://raw.github.com/pierot/server-installer/master/lib.sh; . ./lib.sh
+
+_print_h1 "Export Engine and combine with Grunt setup"
+
+###############################################################################
+
+exec_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+###############################################################################
+
+if [ -z "$1" ]; then
+  target_dir=`_unix_time`
+fi
+
+if [ -z "$target_dir" ]; then
+  target_dir=$1
+fi
+
+if [ -d "./$target_dir" ]; then
+  _error 'Target directory already exists'
+
+  exit 0
+fi
+
+###############################################################################
+
+$exec_dir/engine-export $target_dir
+$exec_dir/grunt-setup $target_dir
