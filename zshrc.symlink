@@ -2,8 +2,9 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="fino"
+# ZSH_THEME="fino"
 # ZSH_THEME="bira"
+ZSH_THEME="crunch"
 
 COMPLETION_WAITING_DOTS='true'
 
@@ -29,8 +30,6 @@ done
 
 bindkey '^L' push-line # push current command into a buffer, allows you to do another command then returns to previous command
 
-# function last_command() {
-#   echo $(history | tail -n 1 | cut -d ' ' -f 2-20 | realiaser)
-# }
-#
-# RPROMPT='%{$fg[$NCOLOR]%}%p $(last_command)%{$reset_color%}'
+# Pure prompt
+autoload -U promptinit && promptinit
+prompt pure

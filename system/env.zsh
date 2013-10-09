@@ -36,6 +36,7 @@ export PATH="/Users/jeroenb/Library/Haskell/ghc-7.4.2/lib/yesod-bin-1.2.0/bin:$P
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$ZSH_CUSTOM/bin:$PATH"
+export PATH="/usr/local/share/npm/bin/:$PATH"
 
 export PATH
 
