@@ -29,6 +29,7 @@ export EDITOR=vim
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/share/python:$PATH"
+export PATH="/Volumes/data/Users/jeroenb/.oh-my-zsh/custom/bin:$PATH"
 export PATH="/Volumes/data/Users/jeroenb/.oh-my-zsh/custom/tmux:$PATH"
 export PATH="/Volumes/data/Users/jeroenb/Applications:$PATH"
 export PATH="/Users/jeroenb/pear/bin:$PATH"
