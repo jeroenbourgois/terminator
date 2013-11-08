@@ -1,0 +1,65 @@
+colorscheme railscasts
+
+" == Airlineline ================================================================
+Bundle 'bling/vim-airline'
+
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline) "
+let g:airline_powerline_fonts=1
+" set timeout timeoutlen=100 ttimeoutlen=50
+
+" =============================================================================
+
+set background=dark
+
+"************************************
+
+" fix for ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPCurWD'
+let g:ctrlp_working_path_mode = 2
+
+"************************************
+
+" highlight current line and column
+:hi CursorLine   cterm=NONE ctermbg=NONE
+:nnoremap <Leader>c :set cursorline!<CR>
+set cursorline
+
+nnoremap <leader>ev <C-w>s<C-w>j<C-w>L:e $MYVIMRC<cr>
+
+" wrap line in paragraph
+:vmap <leader>p <S-S><p>
+
+if $TERM == "xterm-256color"
+  set t_Co=256
+endif
+
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
+
+" Highlight everyting that is longer than 80 chars
+highlight OverLength ctermbg=16 ctermfg=41 guibg=#292929 " this goes further than the max
+match OverLength /\%81v.*/
+let c_space_errors=1
+
+" unmap ;
+
+" ctags location
+let g:easytags_cmd = '/usr/local/bin/ctags'
+
+set synmaxcol=256
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e ~/.vimrc.local<CR>
+nmap <silent> <leader>sv :so ~/.vimrc.local<CR>
+
+" == XDebug ===================================================================
+
+Bundle 'brookhong/DBGPavim'
+
+let g:dbgPavimPort = 9999
+let g:dbgPavimBreakAtEntry = 0
+
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
