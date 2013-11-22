@@ -33,3 +33,5 @@ bindkey '^L' push-line # push current command into a buffer, allows you to do an
 # Pure prompt
 autoload -U promptinit && promptinit
 prompt pure
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
