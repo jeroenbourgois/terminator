@@ -63,3 +63,22 @@ let g:dbgPavimBreakAtEntry = 0
 
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
+
+" == Ag ===================================================================
+" brew install the_silver_searcher
+" pacman -S the_silver_searcher
+" apt-get install silversearcher-ag
+"
+" to search:
+" Ack deleted_at -G '^((?!(core|vendor|packages)).)*\.php$'
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
+" == Go ===================================================================
+Bundle 'jnwhiteh/vim-golang'
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
