@@ -37,6 +37,9 @@ export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$ZSH_CUSTOM/bin:$PATH"
 export PATH="/usr/local/share/npm/bin/:$PATH"
+
+# Go
+export GOPATH="$HOME/Dropbox/private/development/go"
 export PATH="$PATH:$GOPATH/bin"
 
 export PATH
