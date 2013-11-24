@@ -39,8 +39,13 @@ export PATH="$ZSH_CUSTOM/bin:$PATH"
 export PATH="/usr/local/share/npm/bin/:$PATH"
 
 # Go
-export GOPATH="$HOME/Dropbox/private/development/go"
-export PATH="$PATH:$GOPATH/bin"
+if [[ $OS == 'OSX' ]]; then
+  export GOPATH="$HOME/Dropbox/private/development/go"
+  export PATH="$PATH:$GOPATH/bin"
+else
+  # Go on linux
+  export PATH=$PATH:/usr/local/go/bin
+fi
 
 export PATH
 
