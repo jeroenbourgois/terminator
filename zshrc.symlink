@@ -31,6 +31,7 @@ done
 bindkey '^L' push-line # push current command into a buffer, allows you to do another command then returns to previous command
 
 # Pure prompt
+fpath=($ZSH_CUSTOM/pure $fpath)
 autoload -U promptinit && promptinit
 prompt pure
 
