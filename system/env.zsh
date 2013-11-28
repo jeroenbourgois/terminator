@@ -8,7 +8,6 @@ if [[ $CURRENT_SHELL == 'bash' ]]; then
   shopt -s histappend # append to bash_history if Terminal.app quits
 fi
 
-
 # SHELL
 ################################################################################
 
@@ -39,7 +38,7 @@ export PATH="$ZSH_CUSTOM/bin:$PATH"
 export PATH="/usr/local/share/npm/bin/:$PATH"
 
 # Go
-if [[ $OS == 'OSX' ]]; then
+if [[ `uname` == 'Darwin' ]]; then
   export GOPATH="$HOME/Dropbox/private/development/go"
   export PATH="$PATH:$GOPATH/bin"
 else
