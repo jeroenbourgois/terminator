@@ -86,9 +86,9 @@ set-option -g default-terminal "screen-256color"
 setw -g automatic-rename
 
 # Rebind
-set-option -g prefix C-z
+set-option -g prefix C-a
 unbind C-b
-bind C-z send-prefix
+bind C-a send-prefix
 
 unbind % # Remove default binding since we’re replacing
 bind | split-window -h
