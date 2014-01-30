@@ -86,7 +86,7 @@ set-option -g default-terminal "screen-256color"
 setw -g automatic-rename
 
 # Rebind
-set-option -g prefix C-a
+set-option -g prefix C-z
 unbind C-b
 bind C-a send-prefix
 

@@ -2,9 +2,11 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="fino"
+ZSH_THEME="fino"
 # ZSH_THEME="bira"
-ZSH_THEME="crunch"
+# ZSH_THEME="crunch"
+
+ZSH_THEME="pure"
 
 COMPLETION_WAITING_DOTS='true'
 
@@ -16,6 +18,8 @@ plugins=(gitfast fabric encode64 nyan web-search)
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
+
+bindkey '^L' push-line # push current command into a buffer, allows you to do another command then returns to previous command
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,11 +36,9 @@ for config_file ($ZSH_CUSTOM/**/*.zsh) do
   source $config_file
 done
 
-bindkey '^L' push-line # push current command into a buffer, allows you to do another command then returns to previous command
-
 # Pure prompt
-fpath=($ZSH_CUSTOM/pure $fpath)
-autoload -U promptinit && promptinit
-prompt pure
+#
+# fpath=($ZSH_CUSTOM/pure $fpath)
+# autoload -U promptinit && promptinit
+# prompt pure
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
