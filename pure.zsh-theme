@@ -48,7 +48,7 @@ prompt_pure_precmd() {
 	# git info
 	vcs_info
 
-	print -P "\n%F{blue}%~%F{8}$vcs_info_msg_0_$(prompt_pure_git_dirty) $prompt_pure_username%f %F{yellow}$(prompt_pure_cmd_exec_time)%f"
+	# print -P "\n%F{blue}%~%F{8}$vcs_info_msg_0_$(prompt_pure_git_dirty) $prompt_pure_username%f %F{yellow}$(prompt_pure_cmd_exec_time)%f"
 
 	# reset value since `preexec` isn't always triggered
 	unset cmd_timestamp
@@ -72,7 +72,7 @@ prompt_pure_setup() {
 	[[ "$SSH_CONNECTION" != '' ]] && prompt_pure_username='%n@%m '
 
 	# prompt turns red if the previous command didn't exit with 0
-	PROMPT='%(?.%F{magenta}.%F{red})❯%f '
+	PROMPT='%F{blue}%~%F{8}%{$fg[yellow]%}$vcs_info_msg_0_$(prompt_pure_git_dirty)%{$fg_bold[blue]%} $prompt_pure_username%f%F{yellow}$(prompt_pure_cmd_exec_time)%f %(?.%F{magenta}.%F{red})❯%f '
 }
 
 prompt_pure_setup "$@"
