@@ -20,7 +20,7 @@ chatnets = {
 
   freenode = { type = "IRC"; };
 
-  hipchat = { type = "XMPP"; nick = "28509_180484@chat.hipchat.com"; };
+  hipchat = { type = "XMPP"; nick = "28509_180485@chat.hipchat.com"; };
 };
 
 channels = (
@@ -166,21 +166,14 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 
 settings = {
   core = {
-    real_name = "Pieter Michels";
-    user_name = "pieterm";
-    nick = "pierot";
+    real_name = "Jeroen Bourgois";
+    user_name = "jeroenb";
+    nick = "jeroenb";
     timestamp_format = "%H:%M:%S";
     recode_autodetect_utf8 = "yes";
     recode_fallback = "CP1252";
@@ -202,20 +195,19 @@ settings = {
     awl_maxlines = "3";
     awl_prefer_name = "yes";
     awl_separator = "\\ - ";
-    notifier_on_regex_old = "(pieter|pierot|michels|noort)";
     notifier_on_regex = ".*";
-    notifier_channel_regex = "(?=^(?:(?!(Node\.js|documentcloud)).)*$).*";
-    notifier_on_privmsg = 1;
+    notifier_channel_regex = "(?=^(?:(?!(Node.js|documentcloud)).)*$).*";
+    notifier_on_privmsg = "1";
   };
-  "irc/core" = { alternate_nick = "Pieter Michels"; };
+  "irc/core" = { alternate_nick = "Jeroen Bourgois"; };
 };
 
 hilights = (
-  { text = "@pierot"; color = "%M"; nick = "no"; word = "yes"; },
-  { text = "noort.be"; color = "%M"; nick = "no"; word = "no"; },
-  { text = "pierot"; color = "%M"; nick = "no"; word = "yes"; },
-  { text = "Michels"; color = "%M"; nick = "no"; word = "yes"; },
-  { text = "Pieter"; color = "%M"; nick = "no"; word = "yes"; }
+  { text = "@jeroenb"; color = "%M"; nick = "no"; word = "yes"; },
+  { text = "jeroenbourgois.be"; color = "%M"; nick = "no"; word = "no"; },
+  { text = "jeroen"; color = "%M"; nick = "no"; word = "yes"; },
+  { text = "Bourgois"; color = "%M"; nick = "no"; word = "yes"; },
+  { text = "Jeroen"; color = "%M"; nick = "no"; word = "yes"; }
 );
 
 ignores = ( { level = "JOINS PARTS QUITS NICKS"; } );
@@ -270,12 +262,12 @@ windows = {
     );
   };
   7 = {
-    name = "priv-jeroendp";
+    name = "priv-pieterm";
     items = (
       {
         type = "QUERY";
         chat_type = "XMPP";
-        name = "28509_185385@chat.hipchat.com/windows";
+        name = "28509_180484@chat.hipchat.com/";
         tag = "hipchat";
       }
     );
@@ -299,17 +291,6 @@ windows = {
         chat_type = "IRC";
         name = "#documentcloud";
         tag = "freenode";
-      }
-    );
-  };
-  10 = {
-    name = "priv-jeroenb";
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "XMPP";
-        name = "28509_180485@chat.hipchat.com/";
-        tag = "hipchat";
       }
     );
   };
