@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Aliases
-###############################################################################
-
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 
@@ -39,12 +36,11 @@ alias reload!='exec $SHELL'
 # folders
 ###############################################################################
 
-alias repos='cd ~/Dropbox/Private/repos'
-alias projects='cd ~/Projects'
-alias p='cd ~/Projects'
-alias online='cd ~/Dropbox/Private/development/online'
-alias dropbox='cd ~/Dropbox'
-alias clients='cd /Volumes/Proximity1080/1_CLIENTS/'
+alias repos="cd $HOME/Dropbox/Work/repos"
+alias projects="cd $HOME/Projects"
+alias p="cd $HOME/Projects"
+alias online="cd ~/Dropbox/Private/development/online"
+alias dropbox="cd ~/Dropbox"
 
 # jack
 ###############################################################################
@@ -67,9 +63,7 @@ esac
 ###############################################################################
 
 alias profile='vim ~/.zshrc'
-alias terminator='cd ~/.oh-my-zsh/custom | vim'
-alias terminatore='. ~/.oh-my-zsh/custom | vim zshrc.symlink'
-# alias zhsc='cd ~/.oh-my-zsh/custom | vim'
+alias terminator="cd $TERMINATOR | vim"
 
 # apache
 ###############################################################################
