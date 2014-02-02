@@ -44,7 +44,7 @@ set-option -g default-terminal "screen-256color"
 set-option -g set-titles on
 
 # OSX Specific
-set-option -g default-command "~/.oh-my-zsh/custom/tmux/reattach-to-user-namespace -l $SHELL"
+set-option -g default-command "~/.terminator/tmux/reattach-to-user-namespace -l $SHELL"
 
 # Sane mouse scrolling
 set -g mode-mouse on

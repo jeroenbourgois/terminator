@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
+export TERMINATOR=$HOME/.terminator
 
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="fino"
@@ -20,25 +21,30 @@ autoload -U compinit
 compinit
 
 bindkey '^L' push-line # push current command into a buffer, allows you to do another command then returns to previous command
-
 source $ZSH/oh-my-zsh.sh
 
 # Colors for ls and autocompletion
 if [[ $OS == 'OSX' ]]; then ]]
-  eval `dircolors -b $ZSH_CUSTOM/LS_COLORS`
+  eval `dircolors -b $TERMINATOR/LS_COLORS`
 else
-  eval `gdircolors -b $ZSH_CUSTOM/LS_COLORS`
+  eval `gdircolors -b $TERMINATOR/LS_COLORS`
 fi
 zstyle ':completion:*:default'            list-colors ${(s.:.)LS_COLORS}
 
-# load my personal stuff
-for config_file ($ZSH_CUSTOM/**/*.zsh) do
-  source $config_file
+# all of our zsh files
+typeset -U config_files
+config_files=($ZSH/**/*.zsh)
+
+# load all env settings (PATH, CONST, ...)
+for file in ${(M)config_files:#*/env.zsh}
+do
+  source $file
 done
 
-# Pure prompt
-#
-# fpath=($ZSH_CUSTOM/pure $fpath)
-# autoload -U promptinit && promptinit
-# prompt pure
+# load all aliases
+for file in ${(M)config_files:#*/aliases.zsh}
+do
+  source $file
+done
 
+unset config_files
