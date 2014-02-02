@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source $ZSH_CUSTOM/system/colors.zsh
+source $TERMINATOR/system/colors.zsh
 
 alias svns='echo -e "${COLOR_BLUE} » svn status ${COLOR_RESET}"; svn st'
 alias svnc='echo -e "${COLOR_YELLOW} » svn commit -m ${COLOR_RESET}"; svn commit -m "$@"'
