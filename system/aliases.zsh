@@ -37,8 +37,7 @@ alias reload!='exec $SHELL'
 ###############################################################################
 
 alias repos="cd $HOME/Dropbox/Work/repos"
-alias projects="cd $HOME/Projects"
-alias p="cd $HOME/Projects"
+alias projects="cd $HOME/Documents/Projects"
 alias online="cd ~/Dropbox/Private/development/online"
 alias dropbox="cd ~/Dropbox"
 
@@ -63,7 +62,8 @@ esac
 ###############################################################################
 
 alias profile='vim ~/.zshrc'
-alias terminator="cd $TERMINATOR | vim"
+alias terminator="cd $TERMINATOR"
+alias terminatore="cd $TERMINATOR | vim"
 
 # apache
 ###############################################################################
