@@ -49,6 +49,7 @@ export PATH
 ################################################################################
 
 export CLICOLOR=1;
+export LSCOLORS=exfxcxdxbxegedabagacad;
 
 export TZ='Europe/Brussels';
 
