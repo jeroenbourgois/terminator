@@ -28,12 +28,11 @@ export EDITOR=vim
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/share/python:$PATH"
-export PATH="$ZSH_CUSTOM/bin:$PATH"
+export PATH="$TERMINATOR/bin:$PATH"
 export PATH="/Volumes/data/Users/jeroenb/Applications:$PATH"
 export PATH="/Users/jeroenb/pear/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
-export PATH="$ZSH_CUSTOM/bin:$PATH"
 export PATH="/usr/local/share/npm/bin/:$PATH"
 
 # Go
