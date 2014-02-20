@@ -33,18 +33,7 @@ export PATH="/Volumes/data/Users/jeroenb/Applications:$PATH"
 export PATH="/Users/jeroenb/pear/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
-export PATH="/usr/local/share/npm/bin/:$PATH"
-
-# Go
-if [[ `uname` == 'Darwin' ]]; then
-  export GOPATH="$HOME/Dropbox/private/development/go"
-  export PATH="$PATH:$GOPATH/bin"
-else
-  # Go on linux
-  export PATH=$PATH:/usr/local/go/bin
-fi
-
-export PATH
+export PATH="/usr/local/share/npm/bin:$PATH"
 
 ################################################################################
 

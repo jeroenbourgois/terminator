@@ -1,73 +1,17 @@
+" == Theme  ===========================================================================
+
 colorscheme mango
 color mango
-
-" == Airlineline ===============================================================
-
-Bundle 'bling/vim-airline'
-
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline) "
-let g:airline_powerline_fonts=1
-" set timeout timeoutlen=100 ttimeoutlen=50
-
-" ==  ===========================================================================
-
 set background=dark
 
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
-autocmd FileType haskell setlocal expandtab shiftwidth=2 softtabstop=2
-
-" == PHPComplete ===============================================================
-
-" OmniComplete
-
-if has("autocmd") && exists("+omnifunc")
-    autocmd Filetype *
-        \if &omnifunc == "" |
-        \setlocal omnifunc=syntaxcomplete#Complete |
-        \endif
-endif
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
-
-hi Pmenu  guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
-hi PmenuSbar  guifg=#8A95A7 guibg=#F8F8F8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
-hi PmenuThumb  guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
-
-" Ctags {
-    set tags=./tags;/,./php.tags
-
-    " Make tags placed in .git/tags file available in all levels of a repository
-    let gitroot = substitute(system('git rev-parse --show-toplevel'), '[\n\r]', '', 'g')
-    if gitroot != ''
-        let &tags = &tags . ',' . gitroot . '/.git/tags'
-    endif
-" }
-
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git$', '\.hg', '\.svn', '\.bzr']
-
-" " " == CtrlP =====================================================================
-
-" " let g:ctrlp_map = '<c-p>'
-" " let g:ctrlp_cmd = 'CtrlPCurWD'
-" " let g:ctrlp_working_path_mode = 2
-" "
 " == General ===================================================================
 
 " highlight current line and column
 :hi CursorLine   cterm=NONE ctermbg=NONE
 :nnoremap <Leader>c :set cursorline!<CR>
 set cursorline
-
-nnoremap <leader>ev <C-w>s<C-w>j<C-w>L:e $MYVIMRC<cr>
 
 " wrap line in paragraph
 :vmap <leader>p <S-S><p>
@@ -80,22 +24,12 @@ if $TMUX == ''
   set clipboard+=unnamed
 endif
 
-" Highlight everyting that is longer than 80 chars
-highlight OverLength ctermbg=16 ctermfg=41 guibg=#292929 " this goes further than the max
-match OverLength /\%81v.*/
-let c_space_errors=1
-
-" unmap ;
-
-set synmaxcol=256
-
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e ~/.vimrc.local<CR>
 nmap <silent> <leader>sv :so ~/.vimrc.local<CR>
 
 " == XDebug ====================================================================
 
-" Bundle 'brookhong/DBGPavim'
 Bundle 'joonty/vdebug.git'
 
 " let g:dbgPavimPort = 9999
@@ -104,24 +38,11 @@ Bundle 'joonty/vdebug.git'
 " Vdebug options
 let g:vdebug_options = {"on_close":"detach"}
 
-" == Ag =======================================================================
-
-" brew install the_silver_searcher
-" pacman -S the_silver_searcher
-" apt-get install silversearcher-ag
-"
-" to search:
-" Ack deleted_at -G '^((?!(core|vendor|packages)).)*\.php$'
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
 " == Go ========================================================================
 
-Bundle 'jnwhiteh/vim-golang'
 " Clear filetype flags before changing runtimepath to force Vim to reload them.
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
-
-Bundle "ameade/qtpy-vim"
+" filetype off
+" filetype plugin indent off
+" set runtimepath+=$GOROOT/misc/vim
+" filetype plugin indent on
+" syntax on
