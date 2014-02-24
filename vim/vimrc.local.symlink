@@ -28,6 +28,15 @@ endif
 nmap <silent> <leader>ev :e ~/.vimrc.local<CR>
 nmap <silent> <leader>sv :so ~/.vimrc.local<CR>
 
+" == Snippets ==================================================================
+
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+" Optional:
+Bundle "honza/vim-snippets"
+
 " == XDebug ====================================================================
 
 Bundle 'joonty/vdebug.git'
