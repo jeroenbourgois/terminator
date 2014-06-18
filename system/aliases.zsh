@@ -22,7 +22,7 @@ alias hidden-hide='defaults write com.apple.finder AppleShowAllFiles -bool false
 
 alias cwd='pwd | pbcopy' # copy current working directory to clipboard
 
-alias hosts='sudo vi /etc/hosts'
+alias hosts='sudo vim /etc/hosts'
 
 alias fasterfaster='sudo rm -rf /private/var/log/asl/*; sudo rm -rf /var/mail/*'
 
@@ -82,6 +82,7 @@ alias mysql-stop='mysql.server stop'
 
 alias postgresql-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias postgresql-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias posgresql-restart='postgresql-stop | postgresql-start'
 
 # php
 ###############################################################################

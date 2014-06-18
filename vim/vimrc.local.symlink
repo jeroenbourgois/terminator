@@ -1,7 +1,7 @@
 " == Theme  ===========================================================================
 
-colorscheme mango
-color mango
+colorscheme hemisu
+color hemisu
 set background=dark
 
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
@@ -27,31 +27,3 @@ endif
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e ~/.vimrc.local<CR>
 nmap <silent> <leader>sv :so ~/.vimrc.local<CR>
-
-" == Snippets ==================================================================
-
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-
-" Optional:
-Bundle "honza/vim-snippets"
-
-" == XDebug ====================================================================
-
-Bundle 'joonty/vdebug.git'
-
-" let g:dbgPavimPort = 9999
-" let g:dbgPavimBreakAtEntry = 0
-
-" Vdebug options
-let g:vdebug_options = {"on_close":"detach"}
-
-" == Go ========================================================================
-
-" Clear filetype flags before changing runtimepath to force Vim to reload them.
-" filetype off
-" filetype plugin indent off
-" set runtimepath+=$GOROOT/misc/vim
-" filetype plugin indent on
-" syntax on
