@@ -12,7 +12,6 @@ set-option -g   set-titles on
 set-option -g   set-titles-string ' #I-#W '
 set-option -g   terminal-overrides 'xterm*:smcup@:rmcup@'
 set-option -g   base-index 1
-set-option -g   default-path ""
 
 # default window title colors
 set-window-option -g window-status-fg white
@@ -44,7 +43,8 @@ set-option -g default-terminal "screen-256color"
 set-option -g set-titles on
 
 # OSX Specific
-set-option -g default-command "~/.terminator/tmux/reattach-to-user-namespace -l $SHELL"
+# brew install reattach-to-user-namespace
+set-option -g default-command "reattach-to-user-namespace -l $SHELL"
 
 # Sane mouse scrolling
 set -g mode-mouse on
