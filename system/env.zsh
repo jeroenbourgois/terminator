@@ -34,6 +34,7 @@ export PATH="/Users/jeroenb/pear/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 
 ################################################################################
 

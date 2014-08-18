@@ -36,9 +36,16 @@ alias reload!='exec $SHELL'
 # folders
 ###############################################################################
 
-alias repos="cd $HOME/Dropbox/Work/repos"
-alias projects="cd $HOME/Documents/Projects"
-alias online="cd ~/Dropbox/Private/development/online"
+export PLAY="$HOME/work/play"
+export IAMJACK="$HOME/work/iamjack"
+export JACKJOE="$HOME/work/jackjoe"
+
+alias play="cd $PLAY"
+alias iamjack="cd $IAMJACK"
+alias jackjoe="cd $JACKJOE"
+alias dplay="cd ~/Dropbox/Work/play"
+alias bbdo="cd $HOME/work/bbdo"
+alias devel="cd $HOME/Dropbox/Work/devel"
 alias dropbox="cd ~/Dropbox"
 
 # jack
