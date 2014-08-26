@@ -7,3 +7,4 @@ else
   # Go on linux
   export PATH=$PATH:/usr/local/go/bin
 fi
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
