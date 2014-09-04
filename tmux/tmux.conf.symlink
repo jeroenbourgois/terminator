@@ -157,3 +157,7 @@ set -g bell-action any
 # mail bind
 bind + link-window -s mutt -t 0
 bind - unlink-window -t mutt
+
+# resurrect
+run-shell ~/.terminator/tmux/tmux-resurrect/resurrect.tmux
+set -g @resurrect-strategy-vim "session"
