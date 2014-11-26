@@ -36,6 +36,13 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 
+# ANDROID
+################################################################################
+
+export PATH="$PATH:$HOME/work/jackjoe/sdk/android/platform-tools"
+export PATH="$PATH:$HOME/work/jackjoe/sdk/android/tools"
+export ANDORID
+
 ################################################################################
 
 export CLICOLOR=1;
