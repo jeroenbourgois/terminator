@@ -39,8 +39,8 @@ export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 # ANDROID
 ################################################################################
 
-export PATH="$PATH:$HOME/work/sdk/android/platform-tools"
-export PATH="$PATH:$HOME/work/sdk/android/tools"
+export PATH="$PATH:$HOME/Dropbox/Work/sdk/android/platform-tools"
+export PATH="$PATH:$HOME/Dropbox/Work/sdk/android/tools"
 
 ################################################################################
 
