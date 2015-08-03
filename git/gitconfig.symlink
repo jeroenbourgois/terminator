@@ -4,7 +4,7 @@
   name = Jeroen Bourgois
   email = jeroenbourgois@gmail.com
 [core]
-  editor = /usr/bin/vim
+	editor = vim
 [color]
   ui = auto
 [color "branch"]

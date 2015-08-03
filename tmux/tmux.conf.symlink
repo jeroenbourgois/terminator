@@ -1,3 +1,5 @@
+# brew install reattach-to-user-namespace
+
 # Set that stupid Esc-Wait off, so VI works again
 set-option -sg  escape-time 0
 
