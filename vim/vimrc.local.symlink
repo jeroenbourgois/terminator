@@ -5,18 +5,19 @@ filetype off  " required!
 
 Bundle 'croaky/vim-colors-github'
 
-" Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'rstacruz/vim-ultisnips-css'
-Bundle 'wakatime/vim-wakatime'
+" Bundle 'wakatime/vim-wakatime'
+
+Plugin 'captbaritone/better-indent-support-for-php-with-html'
 
 filetype plugin indent on
 
 " == Theme  ====================================================================
 
-
-colorscheme ir_black
+colorscheme badwolf
+" colorscheme ir_black
 " colorscheme github
 " set background=light
 
@@ -40,31 +41,6 @@ if $TMUX == ''
   set clipboard+=unnamed
 endif
 
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e ~/.vimrc.local<CR>
-nmap <silent> <leader>sv :so ~/.vimrc.local<CR>
-
-" restore vim sessions
-Bundle "tpope/vim-obsession"
-
-" == Ultisnips =================================================================
-
-" YCM/Ultisnip TAB
-
-" cd ~/.vim/bundle/YouCompleteMe
-" ./install.sh --clang-completer
-
-" == YCM/Ultisnip TAB ==================
-
-" make YCM compatible with UltiSnips (using supertab)
-" let g:ycm_key_list_select_completion = ['<C-j>', '<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
-" let g:SuperTabDefaultCompletionType = '<C-Tab>'
-"
-" YCM
-" let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
-"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
