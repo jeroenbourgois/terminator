@@ -8,7 +8,6 @@ set-option -g   display-panes-colour red
 set-option -g   history-limit 100000
 set-option -g   message-bg red
 set-option -g   message-fg white
-set-option -g   mouse-select-pane off
 set-option -g   repeat-time 500
 set-option -g   set-titles on
 set-option -g   set-titles-string ' #I-#W '
@@ -49,7 +48,9 @@ set-option -g set-titles on
 set-option -g default-command "reattach-to-user-namespace -l $SHELL"
 
 # Sane mouse scrolling
-set -g mode-mouse on
+set-option -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
 
 # Set window notifications
 setw -g monitor-activity on
@@ -142,7 +143,8 @@ set -g status-right '#[fg=colour148,bg=colour238,nobold]#[fg=colour245,bg=colour
 # set -g status-right '#[fg=colour234,bg=colour148]#[fg=colour22,bg=colour148,noreverse,bold]#($TRM/tmux/segments/cpu) #[fg=colour148,bg=colour238,nobold]#[fg=colour245,bg=colour238,bold] #($TRM/tmux/segments/date) #[fg=colour238,bg=colour234,nobold]#[fg=colour245,bg=colour234,bold] #(whoami)@#(hostname -s)'
 
 # Sane mouse scrolling
-set -g mode-mouse on
+# set -g mode-mouse on
+set-option -g mouse on
 
 # move around panes like in vim (tmux >= 1.6)
 bind j select-pane -D

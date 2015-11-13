@@ -3,8 +3,6 @@
 filetype on   " first on, to avoid vim exiting with status code 1!
 filetype off  " required!
 
-Bundle 'croaky/vim-colors-github'
-
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'rstacruz/vim-ultisnips-css'
@@ -16,17 +14,25 @@ filetype plugin indent on
 
 " == Theme  ====================================================================
 
-colorscheme badwolf
+" colorscheme badwolf
 " colorscheme ir_black
 " colorscheme github
-" set background=light
+colorscheme OceanicNext
+set background=dark
 
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
+
+" == Source after saving ================
+
+if has("autocmd")
+  autocmd! BufWritePost .vimrc.local nested source $MYVIMRC | echo "source $MYVIMRC"
+endif
+
 
 " == General ===================================================================
 
 " highlight current line and column
-:hi CursorLine   cterm=NONE ctermbg=NONE
+" :hi CursorLine   cterm=NONE ctermbg=NONE
 :nnoremap <Leader>c :set cursorline!<CR>
 set cursorline
 
@@ -44,7 +50,3 @@ endif
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" == Go crazy ==================================================================
-
-Plugin 'jlund3/colorschemer'
