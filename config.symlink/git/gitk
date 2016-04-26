@@ -26,7 +26,7 @@ set colors {green red blue magenta darkgrey brown orange}
 set diffcolors {red "#00a000" blue}
 set mergecolors {red blue green purple brown "#009090" magenta "#808000" "#009000" "#ff0080" cyan "#b07070" "#70b0f0" "#70f0b0" "#f0b070" "#ff70b0"}
 set markbgcolor #e0e0ff
-set diffcontext 3
+set diffcontext 16
 set selectbgcolor gray85
 set foundbgcolor yellow
 set currentsearchhitbgcolor orange
@@ -51,12 +51,12 @@ set indexcirclecolor green
 set circlecolors {white blue gray blue blue}
 set linkfgcolor blue
 set circleoutlinecolor black
-set geometry(main) 1449x844+5+28
-set geometry(state) normal
-set geometry(topwidth) 1449
+set geometry(main) 1680x1001+0+23
+set geometry(state) zoomed
+set geometry(topwidth) 1680
 set geometry(topheight) 165
-set geometry(pwsash0) "363 1"
-set geometry(pwsash1) "547 1"
-set geometry(botwidth) 454
-set geometry(botheight) 674
+set geometry(pwsash0) "421 1"
+set geometry(pwsash1) "634 1"
+set geometry(botwidth) 1439
+set geometry(botheight) 831
 set permviews {}

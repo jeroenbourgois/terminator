@@ -6,7 +6,10 @@ filetype off  " required!
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'rstacruz/vim-ultisnips-css'
-" Bundle 'wakatime/vim-wakatime'
+Plugin 'joshdick/onedark.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 
@@ -17,7 +20,8 @@ filetype plugin indent on
 " colorscheme badwolf
 " colorscheme ir_black
 " colorscheme github
-colorscheme OceanicNext
+" colorscheme gruvbox
+colorscheme dracula
 set background=dark
 
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
@@ -47,6 +51,28 @@ if $TMUX == ''
   set clipboard+=unnamed
 endif
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" Rust
+" let g:rustfmt_autosave = 1
+
+function! g:UltiSnips_Complete()
+    call UltiSnips#ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips#JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-e>"
+" this mapping Enter key to <C-y> to chose the current highlight item
+" and close the selection list, same as other IDEs.
+" CONFLICT with some plugins like tpope/Endwise
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
