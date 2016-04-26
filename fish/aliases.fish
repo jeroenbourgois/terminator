@@ -14,11 +14,21 @@ alias vep 'cd ~/.vim; vim ~/.vimrc.local'
 # git
 alias gl 'git pull'
 alias gp 'git push'
-alias gap 'git add -p'
 alias gst 'git status'
-alias gcm 'git commit -m "$argv"'
 alias gsync 'git stash; and git pull; and git stash pop'
 alias gpp 'git commit --allow-empty -m "[deploy:production]"; and git push'
+
+function gc
+  git commit -m "$argv"
+end
+
+function ga
+  git add $argv
+end
+
+function gap
+  git add -p $argv
+end
 
 # hot locations
 alias gogo 'cd $GOPATH'
