@@ -1,4 +1,5 @@
 #! /usr/bin/env ruby
+# Generate random codes
 
 class String
   def is_number?
