@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
-#
-# bootstrap installs things.
 
 DOTFILES_ROOT="`pwd`"
 
 set -e
-
 echo ''
 
 info () {
@@ -26,8 +23,13 @@ fail () {
   exit
 }
 
+link_files () {
+  ln -s $1 $2
+  success "linked $1 to $2"
+}
+
 setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]
+  if ! [ -f $HOME/.gitconfig ]
   then
     info 'setup gitconfig'
 
@@ -42,15 +44,42 @@ setup_gitconfig () {
     user ' - What is your github author email?'
     read -e git_authoremail
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
+    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" tpl/gitconfig > symlinks/gitconfig
 
     success 'gitconfig'
   fi
 }
 
-link_files () {
-  ln -s $1 $2
-  success "linked $1 to $2"
+install_fish() {
+  source="$HOME/.terminator/fish"
+  dest="$HOME/.config/fish"
+  if [ -f $dest ] || [ -d $dest ]
+  then
+    user "Fish config already found ($dest), overwrite? (Y/N)"
+    overwrite=false
+    read -n 1 action
+
+      case "$action" in
+        y )
+          overwrite=true;;
+        Y )
+          overwrite=true;;
+        * )
+          overwrite=false;;
+      esac
+
+    if [ "$overwrite" == "true" ]
+    then
+      rm -rf $dest
+      ln -s $source $dest
+      success "linked $dest"
+    else
+      user "Skipped this Fish config"
+    fi
+  else
+    mkdir -p $dest
+    ln -s $source $dest
+  fi
 }
 
 install_dotfiles () {
@@ -60,13 +89,13 @@ install_dotfiles () {
   backup_all=false
   skip_all=false
 
-  for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
+  for source in `find $DOTFILES_ROOT/symlinks/* -maxdepth 1`
   do
-    dest="$HOME/.`basename \"${source%.*}\"`"
+    dest="$HOME/.`basename \"${source}\"`"
+    echo $dest
 
     if [ -f $dest ] || [ -d $dest ]
     then
-
       overwrite=false
       backup=false
       skip=false
@@ -122,19 +151,8 @@ install_dotfiles () {
 }
 
 setup_gitconfig
+install_fish
 install_dotfiles
-
-# If we're on a Mac, let's install and setup homebrew.
-#if [ "$(uname -s)" == "Darwin" ]
-#then
-#  info "installing dependencies"
-#  if . bin/dot > /tmp/dotfiles-dot 2>&1
-#  then
-#    success "dependencies installed"
-#  else
-#    fail "error installing dependencies"
-#  fi
-#fi
 
 echo ''
 echo '  All installed!'

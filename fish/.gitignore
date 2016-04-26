@@ -1,0 +1,6 @@
+*
+!.gitignore
+!.gitkeep
+!functions
+!config.fish
+!aliases.fish
