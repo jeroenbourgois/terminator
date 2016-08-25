@@ -1,7 +1,7 @@
 [push]
   default = simple
 [user]
-  name = jeroenbourgois
+  name = jeroenb
   email = jeroenbourgois@gmail.com
 [core]
 	editor = vim

@@ -22,7 +22,7 @@ filetype plugin indent on
 " colorscheme github
 " colorscheme gruvbox
 colorscheme dracula
-set background=dark
+" set background=dark
 
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
