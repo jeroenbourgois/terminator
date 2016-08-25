@@ -51,7 +51,8 @@ set -x PATH $PATH $GOPATH/bin $GOROOT/bin
 set -x PATH $PATH $HOME/.stack/programs/x86_64-osx/ghc-7.10.2/bin $HOME/.local/bin
 
 # android :(
-set -x ANDROID_HOME /usr/local/opt/android-sdk
+set -x ANDROID_HOME $HOME/Library/Android/sdk
+set -x PATH $PATH $HOME/Library/Android/sdk/tools $HOME/Library/Android/sdk/platform-tools
 
 # editor
 set -x REACT_EDITOR vim
