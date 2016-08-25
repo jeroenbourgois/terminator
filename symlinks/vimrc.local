@@ -9,7 +9,9 @@ Bundle 'rstacruz/vim-ultisnips-css'
 Plugin 'joshdick/onedark.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'w0ng/vim-hybrid'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'dracula/vim'
+Plugin 'mhinz/vim-signify'
+" Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 
@@ -22,7 +24,7 @@ filetype plugin indent on
 " colorscheme github
 " colorscheme gruvbox
 colorscheme dracula
-set background=dark
+" set background=dark
 
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
@@ -38,7 +40,7 @@ endif
 " highlight current line and column
 " :hi CursorLine   cterm=NONE ctermbg=NONE
 :nnoremap <Leader>c :set cursorline!<CR>
-set cursorline
+" set cursorline
 
 " wrap line in paragraph
 :vmap <leader>p <S-S><p>
