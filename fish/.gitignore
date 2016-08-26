@@ -1,6 +1,2 @@
-*
-!.gitignore
-!.gitkeep
-!functions
-!config.fish
-!aliases.fish
+fishd*
+fish_history
