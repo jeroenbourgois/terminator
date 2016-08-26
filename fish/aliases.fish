@@ -32,8 +32,8 @@ end
 
 # hot locations
 alias gogo 'cd $GOPATH'
-alias jackjoe "cd $HOME/Dropbox/Work/jackjoe"
-alias dev 'cd $HOME/Dropbox/Work'
+alias jackjoe "cd $HOME/work/jackjoe"
+alias dev 'cd $HOME/work'
 alias terminator 'cd $HOME/.terminator'
 
 # tmux
