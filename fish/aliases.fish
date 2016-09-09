@@ -36,6 +36,9 @@ alias jackjoe "cd $HOME/work/jackjoe"
 alias dev 'cd $HOME/work'
 alias terminator 'cd $HOME/.terminator'
 
+# bin
+set -x PATH $PATH $HOME/.terminator/bin
+
 # tmux
 alias t 'tmux'
 alias tk 'tmux kill-server'
