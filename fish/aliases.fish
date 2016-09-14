@@ -17,6 +17,7 @@ alias gp 'git push'
 alias gst 'git status'
 alias gsync 'git stash; and git pull; and git stash pop'
 alias gpp 'git commit --allow-empty -m "[deploy:production]"; and git push'
+alias glg "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 function gc
   git commit -m "$argv"
