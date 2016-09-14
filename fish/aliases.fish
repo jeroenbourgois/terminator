@@ -58,11 +58,6 @@ set -x PATH $PATH $HOME/Library/Android/sdk/tools $HOME/Library/Android/sdk/plat
 # editor
 set -x REACT_EDITOR vim
 
-# amazon cloudwatch
-set -x AWS_ACCESS_KEY "AKIAIYH5HTUB6VGSCFXA"
-set -x AWS_SECRET_KEY "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"
-# set -x AWS_CREDENTIAL_FILE "<Path to the credentials file>"
-
 # some functions
 function ssh-copy
   cat ~/.ssh/id_rsa.pub | pbcopy
