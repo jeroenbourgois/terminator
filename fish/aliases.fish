@@ -45,11 +45,11 @@ alias tl 't ls'
 
 # golang
 set -x GOPATH $HOME/Dropbox/Work/go
-set -x GOROOT /usr/local/go
+# set -x GOROOT /usr/local/go
 set -x PATH $PATH $GOPATH/bin $GOROOT/bin
 
 # haskell
-set -x PATH $PATH $HOME/.stack/programs/x86_64-osx/ghc-7.10.2/bin $HOME/.local/bin
+# set -x PATH $PATH $HOME/.stack/programs/x86_64-osx/ghc-7.10.2/bin $HOME/.local/bin
 
 # android :(
 set -x ANDROID_HOME $HOME/Library/Android/sdk
