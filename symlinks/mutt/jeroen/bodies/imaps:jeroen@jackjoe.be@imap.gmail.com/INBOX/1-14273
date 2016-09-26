@@ -1,0 +1,597 @@
+Delivered-To: jeroen@jackjoe.be
+Received: by 10.107.156.146 with SMTP id f140csp1682864ioe;
+        Sun, 25 Sep 2016 23:45:33 -0700 (PDT)
+X-Received: by 10.25.32.134 with SMTP id g128mr6768493lfg.87.1474872332979;
+        Sun, 25 Sep 2016 23:45:32 -0700 (PDT)
+Return-Path: <pieter@jackjoe.be>
+Received: from mail-lf0-x22e.google.com (mail-lf0-x22e.google.com. [2a00:1450:4010:c07::22e])
+        by mx.google.com with ESMTPS id s87si8053561lfi.87.2016.09.25.23.45.32
+        for <jeroen@jackjoe.be>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 25 Sep 2016 23:45:32 -0700 (PDT)
+Received-SPF: neutral (google.com: 2a00:1450:4010:c07::22e is neither permitted nor denied by domain of pieter@jackjoe.be) client-ip=2a00:1450:4010:c07::22e;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@jackjoe-be.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:4010:c07::22e is neither permitted nor denied by domain of pieter@jackjoe.be) smtp.mailfrom=pieter@jackjoe.be
+Received: by mail-lf0-x22e.google.com with SMTP id g62so131236168lfe.3
+        for <jeroen@jackjoe.be>; Sun, 25 Sep 2016 23:45:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=jackjoe-be.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=wowbxjJg+SGyuT4bo23pObNKizgWsDyNPMIjA7k/kJg=;
+        b=dWJpZuichDOEq5YgBBKlykqpmqOYwBWzeZkbG7GKOAAXDAE3jk0dbyxWv027WuQAkf
+         ld/16BYWCyjFSJdwVjEOX1ZFd24VBGye4maHCbK0fBFWbBg8x2D2AhWhyXkstkEpiRpb
+         ZNzYyJ5e94vkirRmaYRDaKSdOlai/NTWLwAnt/dzcbccG3ltKcE3HKi4gwrMrWwjrRHI
+         i7NK/ZKSqmDcyKXzgEgmR2Gm4YNbk4w5VinPdAxqTI108K+BruNolgGny1sgw7LqDdmM
+         48f6FORaERHEGKhRS0wRPRX1Ve3xtH3QHJTzeCxtWicLKVG9MI22u9S2TXUHhjAQWdKt
+         mEPA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=wowbxjJg+SGyuT4bo23pObNKizgWsDyNPMIjA7k/kJg=;
+        b=DlSwXlPKHaso81m5GCZgMqSJutngvjnior62jgn6FvEKrJ7laJDECIRsIvIzVwKvME
+         BZ5avPuYSC+5OjdCsM7cFprwwKAzk/ChtkRHoLnCb8FBs4B5El/fIDoYe1NtuiNfP81e
+         p0V21IB5++ITfNMOtM7CDWAOL0c7UAgmGelj7z2fX46+5vSxQjZgF/wxPiFQ1sRTXCqe
+         sfDHmiA/1ejZEwFW78jzKWkQQY4+rv7Udu8ofack21rH2VF9+vHEHaHD3lp4VwTicuia
+         iiJMNysh2VdUw5/S7sXJInWai7P8OGv4ZN4nmISe3uUy0fM5BCWgOk0HP3N/z//R0A2n
+         4vlQ==
+X-Gm-Message-State: AE9vXwM9PwF1QVXWHQkAlO8xOzaI9mrIXb+jl1HEXhV+j+cefVEEpoDhkf64A1yMsWpToqglc+rhEkoAFUTBSQ==
+X-Received: by 10.25.221.209 with SMTP id w78mr7123595lfi.124.1474872332232;
+ Sun, 25 Sep 2016 23:45:32 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.25.156.143 with HTTP; Sun, 25 Sep 2016 23:45:11 -0700 (PDT)
+In-Reply-To: <0AF28667-F7B6-4AA2-A045-76AF5D564CCC@famous.be>
+References: <657E36DB-42CB-4C0B-A352-8FAD38C1F91E@famous.be>
+ <CAH9YT_etmZZa7gLv46yn=LWpQKWwV6x=5aG0v9YrYcNhXNpQ_Q@mail.gmail.com>
+ <F8DE473E43727D56.57f126f4-cae7-4c2b-9cf8-72efec3d27a7@mail.outlook.com>
+ <CAH9YT_d0QjROc3OV=mY5H2g8wvNTjuLHj__oHoYGMbeDAc-pag@mail.gmail.com> <0AF28667-F7B6-4AA2-A045-76AF5D564CCC@famous.be>
+From: Pieter Michels <pieter@jackjoe.be>
+Date: Mon, 26 Sep 2016 08:45:11 +0200
+Message-ID: <CAH9YT_dQBMhKN7bazzHOEhPUrgWdUba9_g-MyD4Mjkn3neWn0Q@mail.gmail.com>
+Subject: Re: update flow
+To: Christophe Leuckx <Christophe.Leuckx@famousgrey.com>
+Cc: Jeroen Jack Joe <jeroen@jackjoe.be>
+Content-Type: multipart/alternative; boundary=94eb2c0ebbe873bf04053d6379da
+
+--94eb2c0ebbe873bf04053d6379da
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Bedoel je de updates aan de homepage flow? Alles in geel gearceerd is klaar
+(zie doc)
+
+
+--
+
+Pieter Michels
+*Jack + Joe*
+
+
+*+32 499 / 20 76 14pieter@jackjoe.be <pieter@jackjoe.be>*
+
+2016-09-25 21:53 GMT+02:00 Christophe Leuckx <
+Christophe.Leuckx@famousgrey.com>:
+
+> Dag Pieter,
+>
+>
+>
+> Dus we zitten nu op 24K?
+>
+> Fair langs jullie kant. Merci voor =E2=80=99t overzicht.
+>
+>
+>
+> Hoever staan jullie met de updates?
+>
+>
+>
+> Gr,
+>
+> Christophe
+>
+>
+>
+> *From: *Pieter Michels <pieter@jackjoe.be>
+> *Date: *Sunday 25 September 2016 at 21:50
+> *To: *Christophe Leuckx <Christophe.Leuckx@famousgrey.com>
+> *Cc: *Jeroen Jack Joe <jeroen@jackjoe.be>
+> *Subject: *Re: update flow
+>
+>
+>
+> Christophe,
+>
+>
+>
+> Ik heb de homepage / registratie aangepast en afgewerkt (zie arcering in
+> je flow google doc).
+>
+> Ik heb een view-invite gestuurd naar je @wellconsidered adres voor onze
+> budgettering: https://docs.google.com/spreadsheets/d/1R8oNirpuoS4nX_
+> PTbfr2tr6ypRmZlTzF571ctxkqL2c/edit#gid=3D1549606146
+>
+> De +-jes zijn de extras tot hiertoe. Dat gaat nu over 4,5 dag extra ...
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> --
+>
+> Pieter Michels
+> *Jack + Joe*
+>
+>
+> *+32 499 / 20 76 14 <%2B32%20499%20%2F%2020%2076%2014> pieter@jackjoe.be
+> <pieter@jackjoe.be>*
+>
+>
+>
+> 2016-09-24 12:13 GMT+02:00 Christophe Leuckx <
+> Christophe.Leuckx@famousgrey.com>:
+>
+> Ja heb extra budget gevraagd, dus jullie kunnen ook wat meer hebben. Moet
+> wel een overzicht hebben natuurlijk. Bedankt om hier nog even mee te gaan=
+.
+> Volgende keer moet ik echt wel alles uitgewerkt hebben in flows en
+> wireframes. Er waren nog teveel onduidelijkheden. Ik ga wellicht ook nog
+> wat extra's moeten vragen. Probeer vandaag of morgen ochtend alles op mai=
+l
+> te zetten
+>
+> Gr
+> Christophe
+>
+>
+>
+> On Sat, Sep 24, 2016 at 12:10 PM +0200, "Pieter Michels" <
+> pieter@jackjoe.be> wrote:
+>
+> Christophe,
+>
+>
+>
+> In het doc heb ik gemarkeerd waarmee we al begonnen zijn of reeds af is.
+>
+> Dat nieuwe formulier vanonder voor die abo's is toch ook nieuw, right?
+>
+>
+>
+>
+> --
+>
+> Pieter Michels
+> *Jack + Joe*
+>
+>
+> *+32 499 / 20 76 14 <%2B32%20499%20%2F%2020%2076%2014> pieter@jackjoe.be
+> <pieter@jackjoe.be>*
+>
+>
+>
+> 2016-09-21 15:02 GMT+02:00 Christophe Leuckx <
+> Christophe.Leuckx@famousgrey.com>:
+>
+> Pieter,
+> Jeroen,
+>
+>
+>
+> Hierbij uitgeschreven:
+>
+> https://docs.google.com/document/d/11KckFSVC55vnUkCV-
+> ERnoqqCZ542X9ULMT12wnyX2ro/edit#
+> <https://docs.google.com/document/d/11KckFSVC55vnUkCV-ERnoqqCZ542X9ULMT12=
+wnyX2ro/edit>
+>
+>
+>
+> Check je eens of alles duidelijk is? En wat de schade is ;-)
+>
+> Er is nog wat feedback gekomen, ik tracht dit op te lijsten door te sture=
+n
+> naar jullie, dan kunnen we dat overlopen
+>
+>
+> Gr,
+>
+> Chritsophe
+>
+>
+>
+> *Christophe Leuckx * / Project Manager / M +32 479 557 162
+>
+> *FAMOUSGREY* / Hendrik Placestraat 43a / 1702 Groot-Bijgaarden /
+> www.famousgrey.com
+>
+>
+> ______________________________________________________________________
+> This email has been scanned by the IT101 Email Security System.
+> For more information please visit http://www.it101.be
+> ______________________________________________________________________
+>
+>
+>
+>
+> ______________________________________________________________________
+> This email has been scanned by the IT101 Email Security System.
+> For more information please visit http://www.it101.be
+> ______________________________________________________________________
+>
+>
+> ______________________________________________________________________
+> This email has been scanned by the IT101 Email Security System.
+> For more information please visit http://www.it101.be
+> ______________________________________________________________________
+>
+>
+>
+>
+> ______________________________________________________________________
+> This email has been scanned by the IT101 Email Security System.
+> For more information please visit http://www.it101.be
+> ______________________________________________________________________
+>
+> ______________________________________________________________________
+> This email has been scanned by the IT101 Email Security System.
+> For more information please visit http://www.it101.be
+> ______________________________________________________________________
+>
+
+--94eb2c0ebbe873bf04053d6379da
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Bedoel je de updates aan de homepage flow? Alles in geel g=
+earceerd is klaar (zie doc)</div><div class=3D"gmail_extra"><br clear=3D"al=
+l"><div><div class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><=
+div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">
+
+
+
+
+
+
+
+<p><br></p><p><span style=3D"color:rgb(102,102,102)">--</span><br></p><p><f=
+ont color=3D"#666666">Pieter Michels<br><b>Jack + Joe</b></font></p><p><u><=
+font color=3D"#666666"><a><font color=3D"#666666">+32 499 / 20 76 14</font>=
+</a><br><a href=3D"mailto:pieter@jackjoe.be" target=3D"_blank"><font color=
+=3D"#666666">pieter@jackjoe.be</font></a></font></u></p></div></div></div><=
+/div></div></div></div></div></div></div></div></div></div>
+<br><div class=3D"gmail_quote">2016-09-25 21:53 GMT+02:00 Christophe Leuckx=
+ <span dir=3D"ltr">&lt;<a href=3D"mailto:Christophe.Leuckx@famousgrey.com" =
+target=3D"_blank">Christophe.Leuckx@famousgrey.com</a>&gt;</span>:<br><bloc=
+kquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #cc=
+c solid;padding-left:1ex">
+
+
+
+
+
+
+
+<div bgcolor=3D"white" lang=3D"EN-US" link=3D"blue" vlink=3D"purple">
+<div>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri">Dag Pieter,
+<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri">Dus we zitten nu op 24K?
+<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri">Fair langs jullie kant. Merci voor =E2=80=99t overzicht.
+<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri">Hoever staan jullie met de updates?
+<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri">Gr,
+<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri">Christophe
+<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt;font-fam=
+ily:Calibri"><u></u>=C2=A0<u></u></span></p>
+<div style=3D"border:none;border-top:solid #b5c4df 1.0pt;padding:3.0pt 0cm =
+0cm 0cm">
+<p class=3D"MsoNormal"><b><span style=3D"font-family:Calibri;color:black">F=
+rom: </span>
+</b><span style=3D"font-family:Calibri;color:black">Pieter Michels &lt;<a h=
+ref=3D"mailto:pieter@jackjoe.be" target=3D"_blank">pieter@jackjoe.be</a>&gt=
+;<br>
+<b>Date: </b>Sunday 25 September 2016 at 21:50<br>
+<b>To: </b>Christophe Leuckx &lt;<a href=3D"mailto:Christophe.Leuckx@famous=
+grey.com" target=3D"_blank">Christophe.Leuckx@famousgrey.<wbr>com</a>&gt;<b=
+r>
+<b>Cc: </b>Jeroen Jack Joe &lt;<a href=3D"mailto:jeroen@jackjoe.be" target=
+=3D"_blank">jeroen@jackjoe.be</a>&gt;<br>
+<b>Subject: </b>Re: update flow<u></u><u></u></span></p>
+</div><div><div class=3D"h5">
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<div>
+<div>
+<div>
+<p class=3D"MsoNormal">Christophe, <u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Ik heb de homepage / registratie aangepast en afgewe=
+rkt (zie arcering in je flow google doc).<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Ik heb een view-invite gestuurd naar je @wellconside=
+red adres voor onze budgettering:=C2=A0<a href=3D"https://docs.google.com/s=
+preadsheets/d/1R8oNirpuoS4nX_PTbfr2tr6ypRmZlTzF571ctxkqL2c/edit#gid=3D15496=
+06146" target=3D"_blank">https://docs.<wbr>google.com/spreadsheets/d/<wbr>1=
+R8oNirpuoS4nX_<wbr>PTbfr2tr6ypRmZlTzF571ctxkqL2c/<wbr>edit#gid=3D1549606146=
+</a><u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">De +-jes zijn de extras tot hiertoe. Dat gaat nu ove=
+r 4,5 dag extra ...<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal"><br clear=3D"all">
+<u></u><u></u></p>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<p><u></u>=C2=A0<u></u></p>
+<p><span style=3D"color:#666666">--</span><u></u><u></u></p>
+<p><span style=3D"color:#666666">Pieter Michels<br>
+<b>Jack + Joe</b></span><u></u><u></u></p>
+<p><u><span style=3D"color:#666666"><a href=3D"tel:%2B32%20499%20%2F%2020%2=
+076%2014" value=3D"+32499207614" target=3D"_blank">+32 499 / 20 76 14</a><b=
+r>
+<a href=3D"mailto:pieter@jackjoe.be" target=3D"_blank"><span style=3D"color=
+:#666666">pieter@jackjoe.be</span></a></span></u><u></u><u></u></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+<div>
+<p class=3D"MsoNormal">2016-09-24 12:13 GMT+02:00 Christophe Leuckx &lt;<a =
+href=3D"mailto:Christophe.Leuckx@famousgrey.com" target=3D"_blank">Christop=
+he.Leuckx@famousgrey.<wbr>com</a>&gt;:<u></u><u></u></p>
+<blockquote style=3D"border:none;border-left:solid #cccccc 1.0pt;padding:0c=
+m 0cm 0cm 6.0pt;margin-left:4.8pt;margin-right:0cm">
+<div>
+<p style=3D"margin-right:0cm;margin-bottom:18.75pt;margin-left:0cm;backgrou=
+nd:white">
+<span style=3D"font-size:11.0pt;font-family:Helvetica;color:black">Ja heb e=
+xtra budget gevraagd, dus jullie kunnen ook wat meer hebben. Moet wel een o=
+verzicht hebben natuurlijk. Bedankt om hier nog even mee te gaan. Volgende =
+keer moet ik echt wel alles uitgewerkt
+ hebben in flows en wireframes. Er waren nog teveel onduidelijkheden. Ik ga=
+ wellicht ook nog wat extra&#39;s moeten vragen. Probeer vandaag of morgen =
+ochtend alles op mail te zetten<u></u><u></u></span></p>
+<p style=3D"margin-right:0cm;margin-bottom:18.75pt;margin-left:0cm;backgrou=
+nd:white">
+<span style=3D"font-size:11.0pt;font-family:Helvetica;color:black">Gr</span=
+><span style=3D"font-size:11.0pt;font-family:Helvetica;color:#888888"><br>
+<span>Christophe</span></span><span style=3D"font-size:11.0pt;font-family:H=
+elvetica;color:black"><u></u><u></u></span></p>
+<div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><br>
+<br>
+<u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">On Sat, Sep 24, 2016 =
+at 12:10 PM +0200, &quot;Pieter Michels&quot; &lt;<a href=3D"mailto:pieter@=
+jackjoe.be" target=3D"_blank">pieter@jackjoe.be</a>&gt; wrote:<u></u><u></u=
+></p>
+</div>
+<div>
+<div>
+<p class=3D"MsoNormal">Christophe, <u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">In het doc heb ik gemarkeerd waarmee we al begonnen =
+zijn of reeds af is.<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Dat nieuwe formulier vanonder voor die abo&#39;s is =
+toch ook nieuw, right?=C2=A0<u></u><u></u></p>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal"><br clear=3D"all">
+<u></u><u></u></p>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<p><u></u>=C2=A0<u></u></p>
+<p><span style=3D"color:#666666">--</span><u></u><u></u></p>
+<p><span style=3D"color:#666666">Pieter Michels<br>
+<b>Jack + Joe</b></span><u></u><u></u></p>
+<p><u><span style=3D"color:#666666"><a href=3D"tel:%2B32%20499%20%2F%2020%2=
+076%2014" value=3D"+32499207614" target=3D"_blank">+32 499 / 20 76 14</a><b=
+r>
+<a href=3D"mailto:pieter@jackjoe.be" target=3D"_blank"><span style=3D"color=
+:#666666">pieter@jackjoe.be</span></a></span></u><u></u><u></u></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+<div>
+<p class=3D"MsoNormal">2016-09-21 15:02 GMT+02:00 Christophe Leuckx &lt;<a =
+href=3D"mailto:Christophe.Leuckx@famousgrey.com" target=3D"_blank">Christop=
+he.Leuckx@famousgrey.<wbr>com</a>&gt;:<u></u><u></u></p>
+<blockquote style=3D"border:none;border-left:solid #cccccc 1.0pt;padding:0c=
+m 0cm 0cm 6.0pt;margin-left:4.8pt;margin-right:0cm">
+<div>
+<div>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt">Pieter,
+<br>
+Jeroen, </span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt">=C2=A0<=
+/span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt">Hierbij=
+ uitgeschreven:
+</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt"><a href=
+=3D"https://docs.google.com/document/d/11KckFSVC55vnUkCV-ERnoqqCZ542X9ULMT1=
+2wnyX2ro/edit" target=3D"_blank">https://docs.google.com/<wbr>document/d/11=
+KckFSVC55vnUkCV-<wbr>ERnoqqCZ542X9ULMT12wnyX2ro/<wbr>edit#</a></span><u></u=
+><u></u></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt">=C2=A0<=
+/span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt">Check j=
+e eens of alles duidelijk is? En wat de schade is ;-)</span><u></u><u></u><=
+/p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt">Er is n=
+og wat feedback gekomen, ik tracht dit op te lijsten door te sturen naar ju=
+llie, dan kunnen we dat overlopen</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt"><br>
+Gr, </span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt">Chritso=
+phe
+</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span lang=3D"NL" style=3D"font-size:11.0pt">=C2=A0<=
+/span><u></u><u></u></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none">
+<b><span style=3D"font-size:7.5pt;font-family:Arial">Christophe Leuckx=C2=
+=A0</span></b><span style=3D"font-size:7.5pt;font-family:Arial">=C2=A0/ Pro=
+ject Manager / M +32 479 557 162</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:7.5pt;font-family:Arial"=
+>FAMOUS<span style=3D"color:#df2719">GREY</span></span></b><span style=3D"f=
+ont-size:7.5pt;font-family:Arial">=C2=A0/ Hendrik Placestraat
+ 43a / 1702=C2=A0Groot-Bijgaarden / <a href=3D"http://www.famousgrey.com" t=
+arget=3D"_blank">
+www.famousgrey.com</a></span><span style=3D"font-size:7.5pt">=C2=A0</span><=
+u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal"><br>
+______________________________<wbr>______________________________<wbr>_____=
+_____<br>
+This email has been scanned by the IT101 Email Security System.<br>
+For more information please visit <a href=3D"http://www.it101.be" target=3D=
+"_blank">http://www.it101.be</a><br>
+______________________________<wbr>______________________________<wbr>_____=
+_____<u></u><u></u></p>
+</div>
+</blockquote>
+</div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<p class=3D"MsoNormal"><br>
+______________________________<wbr>______________________________<wbr>_____=
+_____<br>
+This email has been scanned by the IT101 Email Security System.<br>
+For more information please visit <a href=3D"http://www.it101.be" target=3D=
+"_blank">http://www.it101.be</a><br>
+______________________________<wbr>______________________________<wbr>_____=
+_____<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal"><br>
+______________________________<wbr>______________________________<wbr>_____=
+_____<br>
+This email has been scanned by the IT101 Email Security System.<br>
+For more information please visit <a href=3D"http://www.it101.be" target=3D=
+"_blank">http://www.it101.be</a><br>
+______________________________<wbr>______________________________<wbr>_____=
+_____<u></u><u></u></p>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<p class=3D"MsoNormal"><br>
+______________________________<wbr>______________________________<wbr>_____=
+_____<br>
+This email has been scanned by the IT101 Email Security System.<br>
+For more information please visit <a href=3D"http://www.it101.be" target=3D=
+"_blank">http://www.it101.be</a><br>
+______________________________<wbr>______________________________<wbr>_____=
+_____<u></u><u></u></p>
+</div>
+</div>
+</div></div></div><div><div class=3D"h5">
+<br clear=3D"both">
+______________________________<wbr>______________________________<wbr>_____=
+_____<br>
+This email has been scanned by the IT101 Email Security System.<br>
+For more information please visit <a href=3D"http://www.it101.be" target=3D=
+"_blank">http://www.it101.be</a><br>
+______________________________<wbr>______________________________<wbr>_____=
+_____<br>
+</div></div></div>
+
+
+</blockquote></div><br></div>
+
+--94eb2c0ebbe873bf04053d6379da--

@@ -1,0 +1,152 @@
+Delivered-To: jeroen@jackjoe.be
+Received: by 10.107.156.146 with SMTP id f140csp2001580ioe;
+        Wed, 21 Sep 2016 06:02:26 -0700 (PDT)
+X-Received: by 10.194.202.133 with SMTP id ki5mr38383634wjc.45.1474462946346;
+        Wed, 21 Sep 2016 06:02:26 -0700 (PDT)
+Return-Path: <Christophe.Leuckx@famousgrey.com>
+Received: from mail1.bemta5.messagelabs.com (mail1.bemta5.messagelabs.com. [195.245.231.153])
+        by mx.google.com with ESMTPS id p8si33709855wjw.65.2016.09.21.06.02.25
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Sep 2016 06:02:26 -0700 (PDT)
+Received-SPF: pass (google.com: domain of christophe.leuckx@famousgrey.com designates 195.245.231.153 as permitted sender) client-ip=195.245.231.153;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of christophe.leuckx@famousgrey.com designates 195.245.231.153 as permitted sender) smtp.mailfrom=Christophe.Leuckx@famousgrey.com
+Return-Path: <Christophe.Leuckx@famousgrey.com>
+Received: from [85.158.139.35] by server-17.bemta-5.messagelabs.com id 5B/45-03778-1E482E75; Wed, 21 Sep 2016 13:02:25 +0000
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFuphleJIrShJLcpLzFFi42IJ/FYVovuw5VG
+  4wY63ghatm/vZLQ4fk3Zg8rh/7wtzAGMUa2ZeUn5FAmvG2QvPGAtadCve7NrB2MC4SqeLkZND
+  SGAJo8SGfyZdjFxA9nZGiaPvdjCCJNgErCRmT5rODGKLCHhLHP67hBXEFhYQkTjaNQcqLimx/
+  N8lVghbT+L7v8NsIDaLgKrEmmnn2EFsXgEbiXvffjOB2IwCshKfpzeBxZkFxCVuPZkPFpcQEJ
+  BYsuc8M4QtKvHy8T9WCFtH4uz1J4wQtoHE1qX7WCBsBYlXn1qYIObES1z4eocZYpegxMmZT1g
+  mMArNQrJiFpKyWUjKZjFyAMU1Jdbv0ocoUZSY0v2QHcLWkGidMxfKtpB4dfoSO7KaBYwcqxjV
+  i1OLylKLdI30kooy0zNKchMzc3QNDUz1clOLixPTU3MSk4r1kvNzNzECY4kBCHYwfv/jdIhRk
+  oNJSZT3ueOjcCG+pPyUyozE4oz4otKc1OJDjDIcHEoSvNuagXKCRanpqRVpmTnAqIZJS3DwKI
+  nwTgVJ8xYXJOYWZ6ZDpE4xKkqJ89aAJARAEhmleXBtsERyiVFWSpiXEegQIZ6C1KLczBJU+Ve
+  M4hyMSsK8q0Cm8GTmlcBNfwW0mAlo8ZafD0AWlyQipKQaGJc+/jm7oGyX0T32GTOefbZ2u3J/
+  vcKCo7+uPiu5v3Gm+lLD/M1xM3KPhef5703+Zm8cJ8Z75Rjv4a4FbXOvP73cWy/1QvLG9BM39
+  kj5Ts9uvPLVNzHe3X8l/41SV6mLiav2vAz34dBMXj9np0tyZMUK5dTMSY7G0smXtuS/+JJxzt
+  goznen92klluKMREMt5qLiRABqyyN0HwMAAA==
+X-Env-Sender: Christophe.Leuckx@famousgrey.com
+X-Msg-Ref: server-14.tower-179.messagelabs.com!1474462945!56632987!1
+X-Originating-IP: [81.246.122.84]
+X-StarScan-Received:
+X-StarScan-Version: 8.84; banners=famousgrey.com,-,-
+X-VirusChecked: Checked
+Received: (qmail 3756 invoked from network); 21 Sep 2016 13:02:25 -0000
+Received: from 84.122-246-81.adsl-static.isp.belgacom.be (HELO mailsrv01.famous.be) (81.246.122.84)
+  by server-14.tower-179.messagelabs.com with AES256-GCM-SHA384 encrypted SMTP; 21 Sep 2016 13:02:25 -0000
+Received: from mailsrv01.famous.be (10.0.1.12) by mailsrv01.famous.be
+ (10.0.1.12) with Microsoft SMTP Server (TLS) id 15.0.1156.6; Wed, 21 Sep 2016
+ 15:02:24 +0200
+Received: from mailsrv01.famous.be ([fe80::7cd1:d461:9064:4733]) by
+ mailsrv01.famous.be ([fe80::7cd1:d461:9064:4733%12]) with mapi id
+ 15.00.1156.000; Wed, 21 Sep 2016 15:02:24 +0200
+From: Christophe Leuckx <Christophe.Leuckx@famousgrey.com>
+To: Pieter Michels <pieter@jackjoe.be>, Jeroen Jack Joe <jeroen@jackjoe.be>
+Subject: update flow
+Thread-Topic: update flow
+Thread-Index: AQHSFAhlrNMadY3UfUSjpaKhfr11YQ==
+Date: Wed, 21 Sep 2016 13:02:24 +0000
+Message-ID: <657E36DB-42CB-4C0B-A352-8FAD38C1F91E@famous.be>
+Accept-Language: nl-BE, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-messagesentrepresentingtype: 1
+x-ms-exchange-transport-fromentityheader: Hosted
+x-originating-ip: [81.95.113.41]
+Content-Type: multipart/alternative;
+	boundary="_000_657E36DB42CB4C0BA3528FAD38C1F91Efamousbe_"
+MIME-Version: 1.0
+
+--_000_657E36DB42CB4C0BA3528FAD38C1F91Efamousbe_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+UGlldGVyLApKZXJvZW4sCgpIaWVyYmlqIHVpdGdlc2NocmV2ZW46Cmh0dHBzOi8vZG9jcy5nb29n
+bGUuY29tL2RvY3VtZW50L2QvMTFLY2tGU1ZDNTV2blVrQ1YtRVJub3FxQ1o1NDJYOVVMTVQxMndu
+eVgycm8vZWRpdCMKCkNoZWNrIGplIGVlbnMgb2YgYWxsZXMgZHVpZGVsaWprIGlzPyBFbiB3YXQg
+ZGUgc2NoYWRlIGlzIDstKQpFciBpcyBub2cgd2F0IGZlZWRiYWNrIGdla29tZW4sIGlrIHRyYWNo
+dCBkaXQgb3AgdGUgbGlqc3RlbiBkb29yIHRlIHN0dXJlbiBuYWFyIGp1bGxpZSwgZGFuIGt1bm5l
+biB3ZSBkYXQgb3ZlcmxvcGVuCgpHciwKQ2hyaXRzb3BoZQoKQ2hyaXN0b3BoZSBMZXVja3ggIC8g
+UHJvamVjdCBNYW5hZ2VyIC8gTSArMzIgNDc5IDU1NyAxNjIKRkFNT1VTR1JFWSAvIEhlbmRyaWsg
+UGxhY2VzdHJhYXQgNDNhIC8gMTcwMiBHcm9vdC1CaWpnYWFyZGVuIC8gd3d3LmZhbW91c2dyZXku
+Y29tCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fClRoaXMgZW1haWwgaGFzIGJlZW4gc2Nhbm5lZCBieSB0aGUgSVQx
+MDEgRW1haWwgU2VjdXJpdHkgU3lzdGVtLgpGb3IgbW9yZSBpbmZvcm1hdGlvbiBwbGVhc2Ugdmlz
+aXQgaHR0cDovL3d3dy5pdDEwMS5iZQpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCg==
+
+--_000_657E36DB42CB4C0BA3528FAD38C1F91Efamousbe_
+Content-Type: text/html; charset="utf-8"
+Content-ID: <2E2C480772A8854D8AB820D3387EBED0@famous.be>
+Content-Transfer-Encoding: base64
+
+PGh0bWwgeG1sbnM6bz0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTpvZmZpY2U6b2ZmaWNlIiB4
+bWxuczp3PSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOm9mZmljZTp3b3JkIiB4bWxuczptPSJo
+dHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL29mZmljZS8yMDA0LzEyL29tbWwiIHhtbG5zPSJo
+dHRwOi8vd3d3LnczLm9yZy9UUi9SRUMtaHRtbDQwIj4KPGhlYWQ+CjxtZXRhIGh0dHAtZXF1aXY9
+IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4KPG1ldGEg
+bmFtZT0iVGl0bGUiIGNvbnRlbnQ9IiI+CjxtZXRhIG5hbWU9IktleXdvcmRzIiBjb250ZW50PSIi
+Pgo8bWV0YSBuYW1lPSJHZW5lcmF0b3IiIGNvbnRlbnQ9Ik1pY3Jvc29mdCBXb3JkIDE1IChmaWx0
+ZXJlZCBtZWRpdW0pIj4KPHN0eWxlPjwhLS0KLyogRm9udCBEZWZpbml0aW9ucyAqLwpAZm9udC1m
+YWNlCgl7Zm9udC1mYW1pbHk6QXJpYWw7CglwYW5vc2UtMToyIDExIDYgNCAyIDIgMiAyIDIgNDt9
+CkBmb250LWZhY2UKCXtmb250LWZhbWlseToiQ2FtYnJpYSBNYXRoIjsKCXBhbm9zZS0xOjIgNCA1
+IDMgNSA0IDYgMyAyIDQ7fQpAZm9udC1mYWNlCgl7Zm9udC1mYW1pbHk6Q2FsaWJyaTsKCXBhbm9z
+ZS0xOjIgMTUgNSAyIDIgMiA0IDMgMiA0O30KLyogU3R5bGUgRGVmaW5pdGlvbnMgKi8KcC5Nc29O
+b3JtYWwsIGxpLk1zb05vcm1hbCwgZGl2Lk1zb05vcm1hbAoJe21hcmdpbjowY207CgltYXJnaW4t
+Ym90dG9tOi4wMDAxcHQ7Cglmb250LXNpemU6MTIuMHB0OwoJZm9udC1mYW1pbHk6Q2FsaWJyaTt9
+CmE6bGluaywgc3Bhbi5Nc29IeXBlcmxpbmsKCXttc28tc3R5bGUtcHJpb3JpdHk6OTk7Cgljb2xv
+cjojMDU2M0MxOwoJdGV4dC1kZWNvcmF0aW9uOnVuZGVybGluZTt9CmE6dmlzaXRlZCwgc3Bhbi5N
+c29IeXBlcmxpbmtGb2xsb3dlZAoJe21zby1zdHlsZS1wcmlvcml0eTo5OTsKCWNvbG9yOiM5NTRG
+NzI7Cgl0ZXh0LWRlY29yYXRpb246dW5kZXJsaW5lO30Kc3Bhbi5FbWFpbFN0eWxlMTcKCXttc28t
+c3R5bGUtdHlwZTpwZXJzb25hbC1jb21wb3NlOwoJZm9udC1mYW1pbHk6Q2FsaWJyaTsKCWNvbG9y
+OndpbmRvd3RleHQ7fQpzcGFuLm1zb0lucwoJe21zby1zdHlsZS10eXBlOmV4cG9ydC1vbmx5OwoJ
+bXNvLXN0eWxlLW5hbWU6IiI7Cgl0ZXh0LWRlY29yYXRpb246dW5kZXJsaW5lOwoJY29sb3I6dGVh
+bDt9Ci5Nc29DaHBEZWZhdWx0Cgl7bXNvLXN0eWxlLXR5cGU6ZXhwb3J0LW9ubHk7Cglmb250LWZh
+bWlseTpDYWxpYnJpO30KQHBhZ2UgV29yZFNlY3Rpb24xCgl7c2l6ZTo1OTUuMHB0IDg0Mi4wcHQ7
+CgltYXJnaW46NzIuMHB0IDcyLjBwdCA3Mi4wcHQgNzIuMHB0O30KZGl2LldvcmRTZWN0aW9uMQoJ
+e3BhZ2U6V29yZFNlY3Rpb24xO30KLS0+PC9zdHlsZT4KPC9oZWFkPgo8Ym9keSBiZ2NvbG9yPSJ3
+aGl0ZSIgbGFuZz0iRU4tVVMiIGxpbms9IiMwNTYzQzEiIHZsaW5rPSIjOTU0RjcyIj4KPGRpdiBj
+bGFzcz0iV29yZFNlY3Rpb24xIj4KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4gbGFuZz0iTkwi
+IHN0eWxlPSJmb250LXNpemU6MTEuMHB0Ij5QaWV0ZXIsIDxicj4KSmVyb2VuLCA8bzpwPjwvbzpw
+Pjwvc3Bhbj48L3A+CjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxzcGFuIGxhbmc9Ik5MIiBzdHlsZT0i
+Zm9udC1zaXplOjExLjBwdCI+PG86cD4mbmJzcDs8L286cD48L3NwYW4+PC9wPgo8cCBjbGFzcz0i
+TXNvTm9ybWFsIj48c3BhbiBsYW5nPSJOTCIgc3R5bGU9ImZvbnQtc2l6ZToxMS4wcHQiPkhpZXJi
+aWogdWl0Z2VzY2hyZXZlbjoKPG86cD48L286cD48L3NwYW4+PC9wPgo8cCBjbGFzcz0iTXNvTm9y
+bWFsIj48c3BhbiBsYW5nPSJOTCIgc3R5bGU9ImZvbnQtc2l6ZToxMS4wcHQiPjxhIGhyZWY9Imh0
+dHBzOi8vZG9jcy5nb29nbGUuY29tL2RvY3VtZW50L2QvMTFLY2tGU1ZDNTV2blVrQ1YtRVJub3Fx
+Q1o1NDJYOVVMTVQxMndueVgycm8vZWRpdCMiPmh0dHBzOi8vZG9jcy5nb29nbGUuY29tL2RvY3Vt
+ZW50L2QvMTFLY2tGU1ZDNTV2blVrQ1YtRVJub3FxQ1o1NDJYOVVMTVQxMndueVgycm8vZWRpdCM8
+L2E+PG86cD48L286cD48L3NwYW4+PC9wPgo8cCBjbGFzcz0iTXNvTm9ybWFsIj48c3BhbiBsYW5n
+PSJOTCIgc3R5bGU9ImZvbnQtc2l6ZToxMS4wcHQiPjxvOnA+Jm5ic3A7PC9vOnA+PC9zcGFuPjwv
+cD4KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4gbGFuZz0iTkwiIHN0eWxlPSJmb250LXNpemU6
+MTEuMHB0Ij5DaGVjayBqZSBlZW5zIG9mIGFsbGVzIGR1aWRlbGlqayBpcz8gRW4gd2F0IGRlIHNj
+aGFkZSBpcyA7LSk8bzpwPjwvbzpwPjwvc3Bhbj48L3A+CjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxz
+cGFuIGxhbmc9Ik5MIiBzdHlsZT0iZm9udC1zaXplOjExLjBwdCI+RXIgaXMgbm9nIHdhdCBmZWVk
+YmFjayBnZWtvbWVuLCBpayB0cmFjaHQgZGl0IG9wIHRlIGxpanN0ZW4gZG9vciB0ZSBzdHVyZW4g
+bmFhciBqdWxsaWUsIGRhbiBrdW5uZW4gd2UgZGF0IG92ZXJsb3BlbjxvOnA+PC9vOnA+PC9zcGFu
+PjwvcD4KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4gbGFuZz0iTkwiIHN0eWxlPSJmb250LXNp
+emU6MTEuMHB0Ij48YnI+CkdyLCA8bzpwPjwvbzpwPjwvc3Bhbj48L3A+CjxwIGNsYXNzPSJNc29O
+b3JtYWwiPjxzcGFuIGxhbmc9Ik5MIiBzdHlsZT0iZm9udC1zaXplOjExLjBwdCI+Q2hyaXRzb3Bo
+ZSA8bzpwPjwvbzpwPjwvc3Bhbj48L3A+CjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxzcGFuIGxhbmc9
+Ik5MIiBzdHlsZT0iZm9udC1zaXplOjExLjBwdCI+PG86cD4mbmJzcDs8L286cD48L3NwYW4+PC9w
+Pgo8cCBjbGFzcz0iTXNvTm9ybWFsIiBzdHlsZT0idGV4dC1hdXRvc3BhY2U6bm9uZSI+PGI+PHNw
+YW4gc3R5bGU9ImZvbnQtc2l6ZTo3LjVwdDtmb250LWZhbWlseTpBcmlhbCI+Q2hyaXN0b3BoZSBM
+ZXVja3gmbmJzcDs8L3NwYW4+PC9iPjxzcGFuIHN0eWxlPSJmb250LXNpemU6Ny41cHQ7Zm9udC1m
+YW1pbHk6QXJpYWwiPiZuYnNwOy8gUHJvamVjdCBNYW5hZ2VyIC8gTSAmIzQzOzMyIDQ3OSA1NTcg
+MTYyPC9zcGFuPjxzcGFuIHN0eWxlPSJmb250LXNpemU6Ny41cHQiPjxvOnA+PC9vOnA+PC9zcGFu
+PjwvcD4KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PGI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTo3LjVw
+dDtmb250LWZhbWlseTpBcmlhbCI+RkFNT1VTPHNwYW4gc3R5bGU9ImNvbG9yOiNERjI3MTkiPkdS
+RVk8L3NwYW4+PC9zcGFuPjwvYj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjcuNXB0O2ZvbnQtZmFt
+aWx5OkFyaWFsIj4mbmJzcDsvIEhlbmRyaWsgUGxhY2VzdHJhYXQgNDNhIC8gMTcwMiZuYnNwO0dy
+b290LUJpamdhYXJkZW4gLyB3d3cuZmFtb3VzZ3JleS5jb208L3NwYW4+PHNwYW4gc3R5bGU9ImZv
+bnQtc2l6ZTo3LjVwdCI+Jm5ic3A7PC9zcGFuPjxzcGFuIGxhbmc9Ik5MIj48bzpwPjwvbzpwPjwv
+c3Bhbj48L3A+CjwvZGl2Pgo8YnIgY2xlYXI9ImJvdGgiPgpfX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fPEJSPgpUaGlz
+IGVtYWlsIGhhcyBiZWVuIHNjYW5uZWQgYnkgdGhlIElUMTAxIEVtYWlsIFNlY3VyaXR5IFN5c3Rl
+bS48QlI+CkZvciBtb3JlIGluZm9ybWF0aW9uIHBsZWFzZSB2aXNpdCBodHRwOi8vd3d3Lml0MTAx
+LmJlPEJSPgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fPEJSPgo8L2JvZHk+CjwvaHRtbD4KCg==
+
+--_000_657E36DB42CB4C0BA3528FAD38C1F91Efamousbe_--
