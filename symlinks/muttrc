@@ -15,7 +15,8 @@ set postponed           = "+[Gmail]/Drafts"
 set header_cache        = ~/.mutt/jeroen/headers
 set message_cachedir    = ~/.mutt/jeroen/bodies
 set certificate_file    = ~/.mutt/certificates
-set smtp_url            = "smtp://jeroen@smtp.gmail.com:587/"
+set smtp_authenticators = "plain"
+set smtp_url            = "smtp://jeroen@jackjoe.be@smtp.gmail.com:587/"
 set move                = no                                           # Don't ask me to move messages out of my inbox when I quit.
 
 #set folder             = ~/Mail                                       # mailbox location
