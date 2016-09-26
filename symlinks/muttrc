@@ -1,0 +1,11 @@
+set imap_user           = "jeroen@jackjoe.be"
+set imap_keepalive      = 30
+unset imap_passive                             # allow mutt to open new imap connection automatically
+set folder              = "imaps://imap.gmail.com"
+set spoolfile           = "+INBOX"
+set postponed           = "+[Gmail]/Drafts"
+set header_cache        = ~/.mutt/jeroen/headers
+set message_cachedir    = ~/.mutt/jeroen/bodies
+set certificate_file    = ~/.mutt/certificates
+set smtp_url            = "smtp://jeroen@smtp.gmail.com:587/"
+set move                = no
