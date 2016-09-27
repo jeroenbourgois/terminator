@@ -14,10 +14,10 @@ function find_dirty () {
     for gitdir in `find . -name .git`;
     do
         worktree=${gitdir%/*};
-        if ! unstaged_changes $gitdir
-        then
-            echo "unstaged     $gitdir"
-        fi
+        # if ! unstaged_changes $gitdir
+        # then
+        #     echo "unstaged     $gitdir"
+        # fi
 
         if ! uncommited_changes $gitdir
         then

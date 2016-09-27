@@ -1,0 +1,73 @@
+# $Id: sample.mailcap,v 3.0 2002/01/24 12:11:17 roessler Exp $
+
+# ~/.mutt/mailcap
+#
+# this uses the view_attachment script found in ~/.mutt/view_attachment.sh
+#
+# this is meant for an OS X system
+
+# MS Excel
+# this will use the default xls spreadsheet handler from open
+application/x-msexcel; /Users/jeroenb/.mutt/view_attachment.sh %s
+application/ms-exc; /Users/jeroenb/.mutt/view_attachment.sh %s
+application/excel; /Users/jeroenb/.mutt/view_attachment.sh %s
+application/msexcel; /Users/jeroenb/.mutt/view_attachment.sh %s
+application/vnd.ms-exc; /Users/jeroenb/.mutt/view_attachment.sh %s
+application/vnd.ms-excel; /Users/jeroenb/.mutt/view_attachment.sh %s
+
+# MS Word
+# use textedit to open .doc files as it's more light-weight
+application/msword; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
+
+#
+# for Star/OpenOffice stuff, use NeoOffice/J
+#
+# Star/Open Office Writer
+application/vnd.sun.xml.writer; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.sun.xml.writer.global; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.stardivision.writer; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.stardivision.writer-global; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/x-starwriter; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.sun.xml.writer.template; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+
+# Star/Open Office Calc
+application/vnd.sun.xml.calc; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.stardivision.calc; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/x-starcalc; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.sun.xml.calc.template; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+
+# Star/Open Office Draw
+application/vnd.sun.xml.draw; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.stardivision.draw; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/x-stardraw; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.sun.xml.draw.template; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+
+# Star/Open Office Math
+application/vnd.sun.xml.math; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.stardivision.math; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/x-starmath; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+
+application/vnd.sun.xml.writer; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+
+# Star/Open Office Impress
+application/x-starimpress; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.sun.xml.impress.template; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.sun.xml.impress; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.stardivision.impress; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+application/vnd.stardivision.impress-packed; /Users/jeroenb/.mutt/view_attachment.sh %s "-" '/Applications/NeoOfficeJ.app'
+
+# Images
+image/jpeg; /Users/jeroenb/.mutt/view_attachment.sh %s
+image/pjpeg; /Users/jeroenb/.mutt/view_attachment.sh %s
+image/png; /Users/jeroenb/.mutt/view_attachment.sh %s
+image/gif; /Users/jeroenb/.mutt/view_attachment.sh %s
+
+# PDF
+application/pdf; /Users/jeroenb/.mutt/view_attachment.sh %s pdf
+
+# HTML
+# -- always use lynx; it's gay to use safari for this
+text/html; elinks -force-html %s
+
+# Unidentified.
+application/octet-stream; /Users/jeroenb/.mutt/view_attachment.sh %s "-"
