@@ -19,12 +19,6 @@ set smtp_authenticators = "plain"
 set smtp_url            = "smtp://jeroen@jackjoe.be@smtp.gmail.com:587/"
 set move                = no                                           # Don't ask me to move messages out of my inbox when I quit.
 
-#set folder             = ~/Mail                                       # mailbox location
-#set tmpdir             = "/tmp"
-#set record             = "+sent"
-#set mbox               = "+mbox"
-#set postponed          = "+postponed"
-
 set quit                = ask-yes                                      # confirm before quitting
 set wait_key            = no                                           # Don't ask me to press a key to continue after I did a shell escape and came back
 set mbox_type           = Maildir                                      # mailbox type
@@ -106,7 +100,10 @@ bind index,pager \Cj sidebar-next
 bind index,pager \Cl sidebar-open
 bind index,pager \Cn sidebar-scroll-up
 bind index,pager \Cv sidebar-scroll-down
-# bind index,pager \Ct sidebar-toggle
+
+# b toggles sidebar visibility
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
 
 # vim like mutt
 bind index l display-message
