@@ -1,4 +1,4 @@
-source "gpg -d ~/.mutt/password.gpg |"
+#source "gpg -d ~/.mutt/password.gpg |"
 
 set editor              = "vim"                                        # use vim as the default editor
 
