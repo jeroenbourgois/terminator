@@ -113,11 +113,11 @@ macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 # Sidebar Navigation ---------------------------------
-# bind index,pager \Ck sidebar-prev
-# bind index,pager \Cj sidebar-next
-# bind index,pager \Cl sidebar-open
-# bind index,pager \Cn sidebar-scroll-up
-# bind index,pager \Cv sidebar-scroll-down
+bind index,pager \cp sidebar-prev # \cj equals return...
+bind index,pager \cn sidebar-next
+bind index,pager \cl sidebar-open
+# bind index,pager \cn sidebar-scroll-up
+# bind index,pager \cv sidebar-scroll-down
 macro index b '<enter-command>toggle sidebar_visible<enter>'
 macro pager b '<enter-command>toggle sidebar_visible<enter>'
 
@@ -141,7 +141,7 @@ bind pager G  bottom
 bind pager R  group-reply
 
 # View attachments properly.
-# bind attach <return> view-mailcap
+bind attach <return> view-mailcap
 
 # Colors ---------------------------------------------
 source ~/.mutt/colors/mutt-colors-solarized-dark-256.muttrc
