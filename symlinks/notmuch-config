@@ -11,7 +11,7 @@
 # configured here named ".notmuch".
 #
 [database]
-path=/Users/jeroenb/.terminator/~/.mail/jeroen-jackjoe.be
+path=/Users/jeroenb/.mail/jeroen-jackjoe.be
 
 # User configuration
 #
