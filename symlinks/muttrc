@@ -27,6 +27,9 @@ set thorough_search      # strip headers and eval mimes before searching
 
 set from                = "Jeroen Bourgois <jeroen@jackjoe.be>"
 set edit_headers        = yes
+set sendmail            = "/usr/local/bin/msmtp -a jeroen@jackjoe.be"
+set sendmail_wait       = 0
+unset record
 
 # Sidebar Patch --------------------------------------
 set sidebar_delim   = '  │'
