@@ -112,9 +112,11 @@ macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 # Sidebar Navigation ---------------------------------
-bind index,pager <down>   sidebar-next
-bind index,pager <up>     sidebar-prev
-bind index,pager <right>  sidebar-open
+# bind index,pager \Ck sidebar-prev
+# bind index,pager \Cj sidebar-next
+# bind index,pager \Cl sidebar-open
+# bind index,pager \Cn sidebar-scroll-up
+# bind index,pager \Cv sidebar-scroll-down
 macro index b '<enter-command>toggle sidebar_visible<enter>'
 macro pager b '<enter-command>toggle sidebar_visible<enter>'
 
@@ -143,99 +145,6 @@ bind attach <return> view-mailcap
 # Colors ---------------------------------------------
 source ~/.mutt/colors/mutt-colors-solarized-dark-256.muttrc
 
-# # Ctrl-R to mark all as read
-# macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
-#
-# # Sync email
-# macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
-# macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
-#
-# # Saner copy/move dialogs
-# macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
-# macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
-#
-# mailboxes ='INBOX' ='[Gmail]/All Mail' ='[Gmail]/Drafts' ='[Gmail]/Sent Mail' ='work' ='0inbox' ='expenses'
-#
-#
-# # Custom keybindings
-# bind index,pager ! noop                                                # unbind report-spam
-# bind index,pager \# noop                                               # unbind delete-thread
-# bind index,pager % noop                                                # unbind toggle-write
-# bind index,pager & noop                                                # unbind link-threads
-#
-# bind index,pager b noop                                                # Unbind bounce
-# bind index,pager A create-alias                                        # bind alias-creation
-# bind pager <up> previous-line                                          # scroll inside the message rather than the index
-# bind pager <down> next-line                                            # scroll inside the message rather than the index
-#
-#
-# # Gmail style keybindings
-# bind  editor <space> noop
-# bind  index,pager c  mail                                              # compose
-# bind  generic     x  tag-entry		                                     # Select Conversation
-# bind  index       x  tag-thread		                                     # Select Conversation
-# bind  pager       x  tag-message	                                     # Select Conversation
-# bind  index,pager s  flag-message	                                     # Star a message
-#
-# bind  index,pager a  group-reply	                                     # Reply all
-# #bind  index,pager \# delete-thread	                                     # Delete
-# bind  index,pager l  copy-message	                                     # Label
-# bind  index,pager m  save-message	                                     # Move to
-#
-# # Sidebar
-# bind index,pager \Ck sidebar-prev
-# bind index,pager \Cj sidebar-next
-# bind index,pager \Cl sidebar-open
-# bind index,pager \Cn sidebar-scroll-up
-# bind index,pager \Cv sidebar-scroll-down
-#
-# # b toggles sidebar visibility
-# macro index b '<enter-command>toggle sidebar_visible<enter>'
-# macro pager b '<enter-command>toggle sidebar_visible<enter>'
-#
-# # vim like mutt
-# bind index l display-message
-# bind index gg first-entry
-# bind index G last-entry
-# bind index h noop               # Disable h
-#
-# bind pager h exit
-# bind pager gg top
-# bind pager G bottom
-# bind pager J next-line
-# bind pager K previous-line
-#
-# bind attach h exit
-# bind attach e edit-type # Edit MIME Types
-# bind attach l view-attach
-#
-# bind browser l select-entry
-# bind browser L view-file
-# bind browser gg first-entry
-# bind browser G last-entry
-# bind browser h exit
-#
-# # Gmail macros
-# macro index,pager I  <set-flag>O	"Mark as read"
-# macro index,pager U  <clear-flag>O	"Mark as unread"
-# macro index,pager g0 <change-folder>=0inbox<enter>		"Go to 0inbox"
-# macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>"	"Go to all mail"
-# macro index,pager gs <change-folder>=[Gmail]/Starred<enter>	"Go to 'Starred'"
-# macro index,pager gd <change-folder>=[Gmail]/Drafts<enter>	"Go to 'Drafts'"
-# macro index,pager gl <change-folder>?				"Go to 'Label'"
-# macro index,pager gi <change-folder>=INBOX<enter> 		"Go to inbox"
-# macro index,pager gt "<change-folder>=[Gmail]/Sent Mail<enter>"	"Go to 'Sent Mail'"
-# macro index,pager d "<save-message>=[Gmail]/Trash<enter>" "Trash"
-# macro index,pager +  <save-message>=[Gmail]/Important<enter> "Mark as important"
-# macro index,pager !  <save-message>=[Gmail]/Spam<enter> "Report spam"
-# macro index,pager e  "<save-message>=[All]/Gmail Mail<enter><enter>" "Archive conversation"
-# macro index,pager 0  "<save-message>=0inbox<enter>" "0inbox conversation"
-#
-# #folder-hook +INBOX 'macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive conversation"'
-# folder-hook +[Gmail]/Trash macro index,pager y <save-message>=INBOX<enter> "Move to inbox"
-# folder-hook +0inbox 'macro index,pager y <save-message>=INBOX<enter> "Move to inbox"'
-# folder-hook +[Gmail]/Starred bind  index,pager y flag-message #"Toggle star"
-#
 # # Contact aliases
 # # brew install contacts
 # set alias_file		= ~/.mutt/aliases
@@ -245,7 +154,3 @@ source ~/.mutt/colors/mutt-colors-solarized-dark-256.muttrc
 # set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
 # bind editor <Tab> complete-query
 # bind editor ^T    complete
-#
-#
-#
-# push <show-version>
