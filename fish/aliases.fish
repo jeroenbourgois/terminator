@@ -48,8 +48,8 @@ alias tl 't ls'
 
 # golang
 set -x GOPATH $HOME/Dropbox/Work/go
-# set -x GOROOT /usr/local/go
-set -x PATH $PATH $GOPATH/bin $GOROOT/bin
+# set -x GOROOT /usr/local/opt/go/libexec/bin
+set -x PATH $PATH $GOPATH/bin /usr/local/opt/go/libexec/bin
 
 # haskell
 # set -x PATH $PATH $HOME/.stack/programs/x86_64-osx/ghc-7.10.2/bin $HOME/.local/bin
