@@ -65,3 +65,10 @@ set -x REACT_EDITOR vim
 function ssh-copy
   cat ~/.ssh/id_rsa.pub | pbcopy
 end
+
+# mutt
+function mutt
+  bash --login -c 'cd ~/Desktop; /usr/local/bin/mutt' $argv;
+end
+
+alias m mutt
