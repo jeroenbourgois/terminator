@@ -66,6 +66,34 @@ function ssh-copy
   cat ~/.ssh/id_rsa.pub | pbcopy
 end
 
+function sshc
+  ssh-config
+end
+
+function apache-restart
+  sudo apachectl restart
+end
+
+function hosts
+  sudo vim ~/etc/hosts
+end
+
+function vhosts
+  sudo vim /etc/apache2/extra/httpd-vhosts.conf
+end
+
+function apachec
+  sudo vim /etc/apache2/httpd.conf
+end
+
+function apache-config
+  apachec
+end
+
+function ssh-config
+  vim ~/.ssh/config
+end
+
 # mutt
 function mutt
   bash --login -c 'cd ~/Desktop; /usr/local/bin/mutt' $argv;
