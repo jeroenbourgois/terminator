@@ -11,6 +11,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'dracula/vim'
 Plugin 'mhinz/vim-signify'
+Plugin 'chriskempson/base16-vim'
 " Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
@@ -23,8 +24,13 @@ filetype plugin indent on
 " colorscheme ir_black
 " colorscheme github
 " colorscheme gruvbox
-color dracula
-" set background=dark
+" color dracula
+colorscheme base16-google-light
+" set background=light
+
+" spelling color
+hi clear SpellBad
+hi SpellBad cterm=underline ctermfg=LightRed term=reverse
 
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
@@ -33,7 +39,6 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 if has("autocmd")
   autocmd! BufWritePost .vimrc.local nested source $MYVIMRC | echo "source $MYVIMRC"
 endif
-
 
 " == General ===================================================================
 
@@ -45,9 +50,9 @@ endif
 " wrap line in paragraph
 :vmap <leader>p <S-S><p>
 
-if $TERM == "xterm-256color"
-  set t_Co=256
-endif
+" if $TERM == "xterm-256color"
+"   set t_Co=256
+" endif
 
 if $TMUX == ''
   set clipboard+=unnamed
@@ -78,3 +83,9 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Colors
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
