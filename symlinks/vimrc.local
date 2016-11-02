@@ -3,9 +3,9 @@
 filetype on   " first on, to avoid vim exiting with status code 1!
 filetype off  " required!
 
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'rstacruz/vim-ultisnips-css'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'rstacruz/vim-ultisnips-css'
 Plugin 'joshdick/onedark.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'w0ng/vim-hybrid'
