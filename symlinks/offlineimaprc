@@ -1,5 +1,5 @@
 [general]
-ui = ttyui
+ui = basic
 accounts = jeroen-jackjoe.be
 pythonfile = ~/.mutt/offlineimap.py
 fsync = False

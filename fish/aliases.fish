@@ -75,7 +75,7 @@ function apache-restart
 end
 
 function hosts
-  sudo vim ~/etc/hosts
+  sudo vim /etc/hosts
 end
 
 function vhosts
