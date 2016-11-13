@@ -1,0 +1,34 @@
+# OS X
+.DS_Store*
+.idea
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Windows
+Desktop.ini
+Thumbs.db
+
+# version control
+.svn
+.svn/*
+
+# SASS
+.sass-cache
+
+# Symfony console
+*.php~
+
+# Ruby
+.bundle
+
+# General
+log/*.log
+tmp/**/*
+
+# Temporary
+*.swp
+*.swo
+*~
