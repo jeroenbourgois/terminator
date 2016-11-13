@@ -51,21 +51,21 @@ _check_root() {
 
 ###############################################################################
 
-install_dir='.termieter'
+install_dir='.terminator'
 
 ###############################################################################
 
 _usage() {
   _print "
 
-Usage:              install.sh -d ['.termieter']
+Usage:              install.sh -d ['.terminator']
 
-Remote Usage:       bash <( curl -s https://raw.github.com/pierot/termieter/master/install.sh ) [-d '.termieter']
+Remote Usage:       bash <( curl -s https://raw.github.com/jeroenbourgois/terminator/master/install.sh ) [-d '.terminator']
 
 Options:
 
   -h                Show this message
-  -d '.termieter'   Install directory (always in $HOME folder)
+  -d '.terminator'   Install directory (always in $HOME folder)
   "
 
   exit 0
@@ -123,18 +123,18 @@ fi
 
 cd ~
 
-_print "Removing current termieter installation"
+_print "Removing current terminator installation"
 
 rm -rf "$install_dir"
 
 if [ ! -d "$install_dir" ]; then
   if $GIT_INSTALLED; then
-    git clone git://github.com/pierot/termieter.git "$install_dir"
+    git clone git://github.com/jeroenbourgois/terminator.git "$install_dir"
   fi
 fi
 
 if [ ! -d "$install_dir" ]; then
-  _error "Termieter doesn't seem to be installed correctly. Aborting"
+  _error "Terminator doesn't seem to be installed correctly. Aborting"
 
   exit 1
 fi
