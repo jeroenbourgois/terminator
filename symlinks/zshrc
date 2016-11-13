@@ -1,4 +1,4 @@
-source ~/.termieter/env
+source ~/.terminator/env
 
 export SHELL=/bin/zsh
 export ZSH=$TRM/zsh/oh-my-zsh

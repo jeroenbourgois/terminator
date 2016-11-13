@@ -33,13 +33,11 @@ alias ping='echoo "ping -c 5"; ping -c 5' # ping 5 times ‘by default’
 
 alias hosts='sudo vim /etc/hosts'
 
-if [ -d $DROPBOX ]; then
-  alias work="cd $DROPBOX/Work/"
-  alias archive="cd $DROPBOX/Work/archive/"
-  alias repos="cd $DROPBOX/Work/repos/"
-  alias jackjoe="cd $DROPBOX/Work/jackjoe/"
-  alias dev="cd $DROPBOX/Work/devel/"
-fi
+alias work="cd $HOME/Work/"
+alias archive="cd $HOME/Work/archive/"
+alias repos="cd $HOME/Work/repos/"
+alias jackjoe="cd $HOME/Work/jackjoe/"
+alias dev="cd $HOME/Work/devel/"
 
 alias largest_files='sudo du -ha / | sort -n -r | head -n 10'
 

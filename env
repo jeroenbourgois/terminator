@@ -1,5 +1,5 @@
-export TRM=~/.termieter
-export FT=~/.termieter/functions
+export TRM=~/.terminator
+export FT=~/.terminator/functions
 export DROPBOX=~/Dropbox
 export CURRENT_SHELL=`ps -p $$ | tail -1 | awk '{print $NF}'`
 
