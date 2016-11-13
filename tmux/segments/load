@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if [ `uname` == 'Darwin' ]; then
-  uptime | cut -d "," -f 3- | cut -d ":" -f2 | sed 's/,/./g'
-else
-  uptime | cut -d "," -f 3- | cut -d ":" -f2 | sed 's/,//g'
-fi
-
-exit 0
