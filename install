@@ -153,7 +153,7 @@ _print "Install Oh my zsh"
 if [ -d "$HOME/$install_dir/zsh/oh-my-zsh" ] ; then
   _success "Oh my zsh is already installed"
 else
-  git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/$install_dir/zsh/oh-my-zsh
+  git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git $HOME/$install_dir/zsh/oh-my-zsh
 fi
 
 _print "Init custom plugins"
