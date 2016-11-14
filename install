@@ -60,7 +60,7 @@ _usage() {
 
 Usage:              install.sh -d ['.terminator']
 
-Remote Usage:       bash <( curl -s https://raw.github.com/jeroenbourgois/terminator/master/install.sh ) [-d '.terminator']
+Remote Usage:       bash <( curl -s https://raw.githubusercontent.com/jeroenbourgois/terminator/master/install ) [-d '.terminator']
 
 Options:
 
