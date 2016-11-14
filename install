@@ -159,6 +159,10 @@ fi
 
 _print "Init custom plugins"
 
+if [ ! -d "zsh/oh-my-zsh/custom" ]; then
+  mkdir "zsh/oh-my-zsh/custom"
+fi
+
 if [ ! -d "zsh/oh-my-zsh/custom/plugins" ]; then
   mkdir "zsh/oh-my-zsh/custom/plugins"
 fi
