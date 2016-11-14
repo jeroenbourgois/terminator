@@ -153,8 +153,7 @@ _print "Install Oh my zsh"
 if [ -d "$HOME/$install_dir/zsh/oh-my-zsh" ] ; then
   _success "Oh my zsh is already installed"
 else
-  export ZSH=$HOME/$install_dir/zsh/oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" >> /dev/null 2>&1
+  git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/$install_dir/zsh/oh-my-zsh
 fi
 
 _print "Init custom plugins"
