@@ -56,7 +56,7 @@ _check_root() {
 
 ###############################################################################
 
-install_dir='.terminator'
+install_dir="$HOME/.terminator"
 
 ###############################################################################
 
@@ -150,10 +150,10 @@ cd $install_dir
 
 _print "Install Oh my zsh"
 
-if [ -d "$HOME/$install_dir/zsh/oh-my-zsh" ] ; then
+if [ -d "$install_dir/zsh/oh-my-zsh" ] ; then
   _success "Oh my zsh is already installed"
 else
-  git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git $HOME/$install_dir/zsh/oh-my-zsh
+  git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git $install_dir/zsh/oh-my-zsh
 fi
 
 _print "Init custom plugins"
@@ -170,10 +170,10 @@ if [ ! -d "zsh/oh-my-zsh/functions" ]; then
   mkdir "zsh/oh-my-zsh/functions"
 fi
 
-if [ -d "$HOME/$install_dir/tmux/tmux-resurrect" ] ; then
+if [ -d "tmux/tmux-resurrect" ] ; then
   _success "tmux-resurrect is already installed"
 else
-  git clone --depth=1 https://github.com/tmux-plugins/tmux-resurrect $HOME/$install_dir/tmux/tmux-resurrect
+  git clone --depth=1 https://github.com/tmux-plugins/tmux-resurrect $install_dir/tmux/tmux-resurrect
 fi
 
 hash gdircolors 2>&- || { _error "I require coreutils but it's not installed! Trying to .."; CORE_UTILS_INSTALLED=false; }
@@ -212,7 +212,7 @@ done
 mkdir -p ~/.bash_backup
 
 _back_install() {
-  _print "Installing $1"
+  _print "Install $1"
 
   if [ ! -n "$1" ]; then
     _error "Error in install script. Aborting"
@@ -226,14 +226,16 @@ _back_install() {
 
   if [ -f "$install_dir/symlinks/$1" ]; then
     if [ -n "$2" ]; then
+      _print "Symlink '$install_dir/symlinks/$1' into '$HOME/.$2'"
       ln -sf "$install_dir/symlinks/$1" "$HOME/.$2"
     else
+      _print "Symlink '$install_dir/symlinks/$1' into '$HOME/.$1'"
       ln -sf "$install_dir/symlinks/$1" "$HOME/.$1"
     fi
   fi
 }
 
-for sym_file in $HOME/$install_dir/symlinks/*
+for sym_file in $install_dir/symlinks/*
 do
   _back_install $(basename $sym_file)
 done
