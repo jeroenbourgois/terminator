@@ -31,7 +31,7 @@ _print() {
 }
 
 _success() {
-  pritn $COL_GREEN"\n$1\n"$COL_RESET
+  printf $COL_GREEN"\n$1\n"$COL_RESET
 }
 
 _error() {
