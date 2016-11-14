@@ -233,6 +233,7 @@ _back_install() {
   fi
 }
 
+_print "Symlink $HOME/$install_dir/symlinks"
 for sym_file in $HOME/$install_dir/symlinks/*
 do
   _print "Symlink $sym_file"
@@ -241,4 +242,4 @@ done
 
 ###############################################################################
 
-_print "Installation finished"
+_success "Installation finished"
