@@ -212,8 +212,6 @@ done
 mkdir -p ~/.bash_backup
 
 _back_install() {
-  _print "Install $1"
-
   if [ ! -n "$1" ]; then
     _error "Error in install script. Aborting"
 
