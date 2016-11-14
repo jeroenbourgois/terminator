@@ -141,37 +141,6 @@ fi
 
 ###############################################################################
 
-mkdir -p ~/.bash_backup
-
-_back_install() {
-  _print "Installing $1"
-
-  if [ ! -n "$1" ]; then
-    _error "Error in install script. Aborting"
-
-    exit 1
-  fi
-
-  if [ -f "$HOME/.$1" ]; then
-    mv "$HOME/.$1" "$HOME/.bash_backup/.$1"
-  fi
-
-  if [ -f "$install_dir/symlinks/$1" ]; then
-    if [ -n "$2" ]; then
-      ln -sf "$install_dir/symlinks/$1" "$HOME/.$2"
-    else
-      ln -sf "$install_dir/symlinks/$1" "$HOME/.$1"
-    fi
-  fi
-}
-
-for sym_file in $install_dir/symlinks/*
-do
-  _back_install $(basename $sym_file)
-done
-
-###############################################################################
-
 cd $install_dir
 
 _print "Install Oh my zsh"
@@ -229,5 +198,38 @@ do
       echo "Please enter Y or N"
   esac
 done
+
+###############################################################################
+
+mkdir -p ~/.bash_backup
+
+_back_install() {
+  _print "Installing $1"
+
+  if [ ! -n "$1" ]; then
+    _error "Error in install script. Aborting"
+
+    exit 1
+  fi
+
+  if [ -f "$HOME/.$1" ]; then
+    mv "$HOME/.$1" "$HOME/.bash_backup/.$1"
+  fi
+
+  if [ -f "$install_dir/symlinks/$1" ]; then
+    if [ -n "$2" ]; then
+      ln -sf "$install_dir/symlinks/$1" "$HOME/.$2"
+    else
+      ln -sf "$install_dir/symlinks/$1" "$HOME/.$1"
+    fi
+  fi
+}
+
+for sym_file in $install_dir/symlinks/*
+do
+  _back_install $(basename $sym_file)
+done
+
+###############################################################################
 
 _print "Installation finished"
