@@ -180,7 +180,7 @@ if [ -d "$HOME/$install_dir/zsh/oh-my-zsh" ] ; then
   _success "Oh my zsh is already installed"
 else
   export ZSH=$HOME/$install_dir/zsh/oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" > /dev/null
 fi
 
 _print "Init custom plugins"
