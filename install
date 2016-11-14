@@ -233,10 +233,8 @@ _back_install() {
   fi
 }
 
-_print "Symlink $HOME/$install_dir/symlinks"
 for sym_file in $HOME/$install_dir/symlinks/*
 do
-  _print "Symlink $sym_file"
   _back_install $(basename $sym_file)
 done
 
