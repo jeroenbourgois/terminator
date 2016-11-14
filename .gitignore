@@ -3,3 +3,6 @@ symlinks/mutt/jeroen
 symlinks/mutt/certs
 offlineimappass
 symlinks/mutt/offlineimappass.gpg
+**/config.autosave
+tmux/tmux-resurrect
+tmux/tmux-resurrect-auto
