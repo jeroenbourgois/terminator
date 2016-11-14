@@ -12,4 +12,4 @@ My shell environment, the Fish shell
 install
 -------
 
-bash <( curl -s https://raw.githubusercontent.com/jeroenbourgois/terminator/master/install)
+`bash <( curl -s https://raw.githubusercontent.com/jeroenbourgois/terminator/master/install)`
