@@ -129,7 +129,7 @@ rm -rf "$install_dir"
 
 if [ ! -d "$install_dir" ]; then
   if $GIT_INSTALLED; then
-    git clone git://github.com/jeroenbourgois/terminator.git "$install_dir"
+    git clone git@github.com:jeroenbourgois/terminator.git "$install_dir"
   fi
 fi
 
