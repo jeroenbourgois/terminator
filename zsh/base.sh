@@ -200,11 +200,9 @@ alias godir="cd $GOPATH"
 
 ##########################################################
 
-# ANDROID
-# export PATH="$PATH:$DROPBOX/Work/devel/Android/sdk/platform-tools"
-# export PATH="$PATH:$DROPBOX/Work/devel/Android/sdk/tools"
-
-export ANDROID_HOME=/usr/local/opt/android-sdk
+# ANDROID :(
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 ##########################################################
 
