@@ -38,7 +38,7 @@ alias archive="cd $HOME/Work/archive/"
 alias repos="cd $HOME/Work/repos/"
 alias jackjoe="cd $HOME/Work/jackjoe/"
 alias dev="cd $HOME/Work/devel/"
-alias gogo="cd $Home/Work/go"
+alias gogo="cd $HOME/Work/go"
 
 alias largest_files='sudo du -ha / | sort -n -r | head -n 10'
 
@@ -75,27 +75,6 @@ else
     netstat -tulpn
   }
 fi
-
-##########################################################
-
-# SVN
-export SVN_EDITOR='vim'
-
-alias svns='svn st'
-alias svnc='svn commit -m "$@"'
-alias svnu='svn up'
-
-svn-add-all() {
-  svn st | grep "^?" | awk '{$1=""; print $0}' | while read f; do svn add "$f"; done
-}
-
-svn-delete-all() {
-  svn st | grep '^\!' | sed 's/! *//' | xargs -I% svn rm %
-}
-
-alias svn-status-all="$FT/svnstatus.py $@"
-alias svn-up-all="$FT/functions/svnup.py $@"
-alias svn-update-all='svn-up-all'
 
 ##########################################################
 
@@ -189,13 +168,13 @@ fi
 # GO
 if [[ $OS == 'OSX' ]]; then
   export GOPATH="$HOME/Work/go"
-  export GOROOT="/usr/local/go"
+  export PATH="$PATH:$GOPATH/bin"
 else
   export GOROOT="/usr/lib/go"
   export GOPATH="$HOME/go"
+  export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 fi
 
-export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
 alias godir="cd $GOPATH"
 
