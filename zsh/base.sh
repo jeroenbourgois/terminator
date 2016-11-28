@@ -38,6 +38,7 @@ alias archive="cd $HOME/Work/archive/"
 alias repos="cd $HOME/Work/repos/"
 alias jackjoe="cd $HOME/Work/jackjoe/"
 alias dev="cd $HOME/Work/devel/"
+alias gogo="cd $Home/Work/go"
 
 alias largest_files='sudo du -ha / | sort -n -r | head -n 10'
 
@@ -187,7 +188,7 @@ fi
 
 # GO
 if [[ $OS == 'OSX' ]]; then
-  export GOPATH="$DROPBOX/Work/go"
+  export GOPATH="$HOME/Work/go"
   export GOROOT="/usr/local/go"
 else
   export GOROOT="/usr/lib/go"
