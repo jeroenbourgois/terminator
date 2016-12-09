@@ -18,6 +18,9 @@ Plugin 'mhinz/vim-signify'
 Plugin 'chriskempson/base16-vim'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 
+" test
+Plugin 'slashmili/alchemist.vim'
+
 filetype plugin indent on
 
 " spelling color

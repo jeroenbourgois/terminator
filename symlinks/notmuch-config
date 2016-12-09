@@ -1,3 +1,7 @@
+# .notmuch-config - Configuration file for the notmuch mail system
+#
+# For more information about notmuch, see http://notmuchmail.org
+
 # Database configuration
 #
 # The only value supported here is 'path' which should be the top-level
@@ -7,7 +11,7 @@
 # configured here named ".notmuch".
 #
 [database]
-path=/Users/pieterm/Dropbox/Pieter/mail/noort.be
+path=/Users/jeroenb/.mail/jeroen-jackjoe.be
 
 # User configuration
 #
@@ -25,9 +29,8 @@ path=/Users/pieterm/Dropbox/Pieter/mail/noort.be
 # address to which the original email was addressed.
 #
 [user]
-name=Pieter Michels
-primary_email=pieter@noort.be
-other_email=pieter@wellconsidered.be;pieter.michels@gmail.com;
+name=Jeroen
+primary_email=jeroen@jackjoe.be
 
 # Configuration for "notmuch new"
 #
@@ -39,12 +42,13 @@ other_email=pieter@wellconsidered.be;pieter.michels@gmail.com;
 #	ignore	A list (separated by ';') of file and directory names
 #		that will not be searched for messages by "notmuch new".
 #
-#		NOTE: *Every* file/directory that goes by one of those names will
-#		be ignored, independent of its depth/location in the mail store.
+#		NOTE: *Every* file/directory that goes by one of those
+#		names will be ignored, independent of its depth/location
+#		in the mail store.
 #
 [new]
-tags=unread;inbox;new;
-ignore=temp;.mbsyncstate;.uidvalidity;
+tags=unread;inbox;
+ignore=
 
 # Search configuration
 #
@@ -81,3 +85,13 @@ exclude_tags=deleted;spam;
 #
 [maildir]
 synchronize_flags=true
+
+# Cryptography related configuration
+#
+# The following option is supported here:
+#
+#	gpg_path
+#		binary name or full path to invoke gpg.
+#
+[crypto]
+gpg_path=gpg

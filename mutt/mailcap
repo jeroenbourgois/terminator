@@ -1,25 +1,36 @@
-# MS Word documents
-application/msword; $TRM/mutt/functions/view_attachment %s "-" '/Applications/TextEdit.app'
+# $Id: sample.mailcap,v 3.0 2002/01/24 12:11:17 roessler Exp $
+
+# ~/.mutt/mailcap
+#
+# this uses the view_attachment script found in ~/.mutt/view_attachment.sh
+#
+# this is meant for an OS X system
+
+# MS Excel
+# this will use the default xls spreadsheet handler from open
+application/x-msexcel; ~/.mutt/view_attachment.sh %s
+application/ms-exc; ~/.mutt/view_attachment.sh %s
+application/excel; ~/.mutt/view_attachment.sh %s
+application/msexcel; ~/.mutt/view_attachment.sh %s
+application/vnd.ms-exc; ~/.mutt/view_attachment.sh %s
+application/vnd.ms-excel; ~/.mutt/view_attachment.sh %s
+
+# MS Word
+# use textedit to open .doc files as it's more light-weight
+application/msword; ~/.mutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
 
 # Images
-image/jpg; $TRM/mutt/functions/view_attachment %s jpg
-image/jpeg; $TRM/mutt/functions/view_attachment %s jpg
-image/pjpeg; $TRM/mutt/functions/view_attachment %s jpg
-image/png; $TRM/mutt/functions/view_attachment %s png
-image/gif; $TRM/mutt/functions/view_attachment %s gif
+image/jpeg; ~/.mutt/view_attachment.sh %s jpg
+image/pjpeg; ~/.mutt/view_attachment.sh %s jpg
+image/png; ~/.mutt/view_attachment.sh %s png
+image/gif; ~/.mutt/view_attachment.sh %s gif
 
-# PDFs
-application/pdf; $TRM/mutt/functions/view_attachment %s pdf
+# PDF
+application/pdf; ~/.mutt/view_attachment.sh %s pdf
 
 # HTML
-text/html; $TRM/mutt/functions/view_attachment %s html
+# -- always use lynx; it's gay to use safari for this
+text/html; elinks -force-html %s
 
 # Unidentified files
-application/octet-stream; $TRM/mutt/functions/view_attachment %s "-"
-
-application/x-gzip              ; unzip %s
-application/x-rar-compressed    ; rar v %s
-application/x-tar               ; tar xzf %s
-application/x-tar-gz            ; tar xzf %s
-application/x-zip-compressed    ; unzip %s
-application/zip                 ; unzip %s
+application/octet-stream; ~/.mutt/view_attachment.sh %s "-"
