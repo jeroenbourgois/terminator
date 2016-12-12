@@ -1,7 +1,7 @@
 [general]
 ui = basic
 accounts = jeroen-jackjoe.be
-pythonfile = ~/.mutt/offlineimap.py
+pythonfile = $TRM/mutt/offlineimap.py
 fsync = False
 
 [Account jeroen-jackjoe.be]
