@@ -29,7 +29,7 @@ filetype plugin indent on
 
 " == General ===================================================================
 
-:nnoremap <Leader>c :set cursorline!<CR>
+:nnoremap <Leader>cl :set cursorline!<CR>
 
 " wrap line in paragraph
 :vmap <leader>p <S-S><p>
