@@ -222,7 +222,7 @@ _back_install() {
     mv "$HOME/.$1" "$HOME/.bash_backup/.$1"
   fi
 
-  if [ -f "$install_dir/symlinks/$1" ]; then
+  if [[ -f "$install_dir/symlinks/$1" || -d "$install_dir/symlinks/$1" ]]; then
     if [ -n "$2" ]; then
       _print "Symlink '$install_dir/symlinks/$1' into '$HOME/.$2'"
       ln -sf "$install_dir/symlinks/$1" "$HOME/.$2"

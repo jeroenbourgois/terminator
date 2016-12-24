@@ -32,6 +32,7 @@ alias vi='vim'
 alias ping='echoo "ping -c 5"; ping -c 5' # ping 5 times ‘by default’
 
 alias hosts='sudo vim /etc/hosts'
+alias whereismycam='sudo killall AppleCameraAssistant;sudo killall VDCAssistant'
 
 alias work="cd $HOME/Work/"
 alias archive="cd $HOME/Work/archive/"
