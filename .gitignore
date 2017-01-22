@@ -1,5 +1,6 @@
 mutt/jeroen
 mutt/certs
+mutt/tmp/**
 offlineimappass
 symlinks/mutt/offlineimappass.gpg
 **/config.autosave
