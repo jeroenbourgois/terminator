@@ -1,6 +1,5 @@
-.DS_Store
-symlinks/mutt/jeroen
-symlinks/mutt/certs
+mutt/jeroen
+mutt/certs
 offlineimappass
 symlinks/mutt/offlineimappass.gpg
 **/config.autosave
