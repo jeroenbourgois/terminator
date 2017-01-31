@@ -176,7 +176,6 @@ else
   export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 fi
 
-
 alias godir="cd $GOPATH"
 
 ##########################################################
@@ -184,6 +183,12 @@ alias godir="cd $GOPATH"
 # ANDROID :(
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
+
+##########################################################
+
+# JHBuild (gimp)
+
+export PATH="$HOME/.local/bin:$PATH"
 
 ##########################################################
 
