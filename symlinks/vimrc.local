@@ -21,8 +21,6 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'majutsushi/tagbar'
 
-Plugin 'terryma/vim-multiple-cursors'
-
 filetype plugin indent on
 
 " ctags test
@@ -43,13 +41,6 @@ let g:tagbar_type_elixir = {
     \ ]
 \ }
 nmap <F8> :TagbarToggle<CR>
-
-" Multiple cursors
-let g:multi_cursor_start_key='<F5>'
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-k>'
-let g:multi_cursor_quit_key='<Esc>'
 
 " spelling color
 " hi clear SpellBad
