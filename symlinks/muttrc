@@ -119,7 +119,7 @@ bind  index,pager s  flag-message  # star a message
 macro index,pager !  <save-message>=jeroen-jackjoe.be/spam<enter><enter> "Report spam"
 bind  index,pager \# delete-thread # delete
 bind  index,pager l  copy-message	 # label
-bind  index,pager v  save-message  # move to
+bind  index,pager V  save-message  # move to
 macro index,pager I  <set-flag>O	 "Mark as read"
 macro index,pager U  <clear-flag>O "Mark as unread"
 macro index gi "<change-folder>=jeroen-jackjoe.be/INBOX<enter>" "Go to inbox"
