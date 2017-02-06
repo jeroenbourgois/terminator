@@ -64,8 +64,7 @@ if [[ $OS == 'OSX' ]]; then
   alias mysql-restart='mysql-stop | mysql-start'
 
   # APACHE
-  alias apache-vhosts='sudo vim /private/etc/apache2/extra/httpd-vhosts.conf'
-  alias apache-config='sudo vim /private/etc/apache2/httpd.conf'
+  alias apache-vhosts='sudo vim /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf'
   alias apache24-config='sudo vim /usr/local/etc/apache2/2.4/httpd.conf'
 else
   function list-services() {
@@ -163,6 +162,11 @@ else
     eval "$(rbenv init -)"
   fi
 fi
+##########################################################
+
+# PHP
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 ##########################################################
 
