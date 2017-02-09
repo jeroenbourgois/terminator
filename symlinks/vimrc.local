@@ -7,18 +7,12 @@ let g:jsx_ext_required = 0
 filetype on   " first on, to avoid vim exiting with status code 1!
 filetype off  " required!
 
-Plugin 'joshdick/onedark.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'dracula/vim'
 Plugin 'chriskempson/base16-vim'
-Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'easymotion/vim-easymotion'
 
 " test
 Plugin 'slashmili/alchemist.vim'
-Plugin 'ternjs/tern_for_vim'
 Plugin 'majutsushi/tagbar'
 
 filetype plugin indent on
