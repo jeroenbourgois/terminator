@@ -14,6 +14,7 @@ Plugin 'easymotion/vim-easymotion'
 " test
 Plugin 'slashmili/alchemist.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 
