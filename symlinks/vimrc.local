@@ -1,7 +1,3 @@
-" == VIM JSX =======================================================
-
-let g:jsx_ext_required = 0
-
 " == Custom bundles (mind the filetype settings!) ==============================
 
 filetype on   " first on, to avoid vim exiting with status code 1!
@@ -18,29 +14,8 @@ Plugin 'easymotion/vim-easymotion'
 
 " test
 Plugin 'slashmili/alchemist.vim'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'majutsushi/tagbar'
 
 filetype plugin indent on
-
-" ctags test
-let g:tagbar_type_elixir = {
-    \ 'ctagstype' : 'elixir',
-    \ 'kinds' : [
-        \ 'f:functions',
-        \ 'functions:functions',
-        \ 'c:callbacks',
-        \ 'd:delegates',
-        \ 'e:exceptions',
-        \ 'i:implementations',
-        \ 'a:macros',
-        \ 'o:operators',
-        \ 'm:modules',
-        \ 'p:protocols',
-        \ 'r:records'
-    \ ]
-\ }
-nmap <F8> :TagbarToggle<CR>
 
 " spelling color
 " hi clear SpellBad
