@@ -1,36 +1,16 @@
-# $Id: sample.mailcap,v 3.0 2002/01/24 12:11:17 roessler Exp $
-
-# ~/.mutt/mailcap
-#
 # this uses the view_attachment script found in ~/.mutt/view_attachment.sh
-#
 # this is meant for an OS X system
-
-# MS Excel
-# this will use the default xls spreadsheet handler from open
-application/x-msexcel; ~/.mutt/view_attachment.sh %s
-application/ms-exc; ~/.mutt/view_attachment.sh %s
-application/excel; ~/.mutt/view_attachment.sh %s
-application/msexcel; ~/.mutt/view_attachment.sh %s
-application/vnd.ms-exc; ~/.mutt/view_attachment.sh %s
-application/vnd.ms-excel; ~/.mutt/view_attachment.sh %s
-
-# MS Word
-# use textedit to open .doc files as it's more light-weight
-application/msword; ~/.mutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
-
-# Images
-image/jpeg; ~/.mutt/view_attachment.sh %s jpg
-image/pjpeg; ~/.mutt/view_attachment.sh %s jpg
-image/png; ~/.mutt/view_attachment.sh %s png
-image/gif; ~/.mutt/view_attachment.sh %s gif
-
-# PDF
-application/pdf; ~/.mutt/view_attachment.sh %s pdf
-
-# HTML
-# -- always use lynx; it's gay to use safari for this
-text/html; elinks -force-html %s
-
-# Unidentified files
-application/octet-stream; ~/.mutt/view_attachment.sh %s "-"
+application/x-msexcel     ; $TRM/mutt/view_attachment.sh %s
+application/ms-exc        ; $TRM/mutt/view_attachment.sh %s
+application/excel         ; $TRM/mutt/view_attachment.sh %s
+application/msexcel       ; $TRM/mutt/view_attachment.sh %s
+application/vnd.ms-exc    ; $TRM/mutt/view_attachment.sh %s
+application/vnd.ms-excel  ; $TRM/mutt/view_attachment.sh %s
+application/msword        ; $TRM/mutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
+image/jpeg                ; $TRM/mutt/view_attachment.sh %s jpg
+image/pjpeg               ; $TRM/mutt/view_attachment.sh %s jpg
+image/png                 ; $TRM/mutt/view_attachment.sh %s png
+image/gif                 ; $TRM/mutt/view_attachment.sh %s gif
+application/pdf           ; $TRM/mutt/view_attachment.sh %s pdf
+application/octet-stream  ; $TRM/mutt/view_attachment.sh %s "-"
+text/html                 ; elinks -force-html %s

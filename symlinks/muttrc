@@ -9,7 +9,6 @@ set message_cachedir = $TRM/mutt/cache/bodies  # where to store bodies
 set certificate_file = $TRM/mutt/certificates  # where to store certs
 set mailcap_path     = $TRM/mutt/mailcap       # entries for filetypes
 set tmpdir           = $TRM/mutt/tmp          # where to keep tmp files
-set signature        = $TRM/mutt/signature     # my signature file
 
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
@@ -25,6 +24,7 @@ set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 set copy = no            # do not copy sent mail, Gmail smtp already does this.
+set arrow_cursor
 
 set edit_headers        = yes
 set sendmail_wait       = 0
@@ -89,6 +89,9 @@ bind index R        group-reply
 bind index <tab>    sync-mailbox
 bind index <space>  collapse-thread
 
+# Colors ---------------------------------------------
+source $TRM/mutt/colors/jackjoe.mutt
+
 # Account Settings -----------------------------------
 
 # Default inbox.
@@ -110,10 +113,10 @@ mailboxes "+-- Jack+Joe -------------" \
           +antenno/sent \
           +antenno/drafts \
 
-source ~/.terminator/mutt/accounts/jackjoe
+folder-hook jeroen-jackjoe.be/* source $TRM/mutt/accounts/jackjoe/config
+folder-hook antenno/* source $TRM/mutt/accounts/antenno/config
 
-folder-hook JackJoe/* source ~/.terminator/mutt/accounts/jackjoe
-folder-hook Antenno/* source ~/.terminator/mutt/accounts/antenno
+source $TRM/mutt/accounts/jackjoe/config
 
 # macro index,pager gl <change-folder>?				"Go to 'Label'"
 # macro index,pager gt "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to 'Sent Mail'"
@@ -174,9 +177,6 @@ bind  index,pager l  copy-message	 # label
 bind  index,pager V  save-message  # move to
 macro index,pager I  <set-flag>O	 "Mark as read"
 macro index,pager U  <clear-flag>O "Mark as unread"
-
-# Colors ---------------------------------------------
-source $TRM/mutt/colors/badwolf.muttrc
 
 # Search ---------------------------------------------
 macro index S "<enter-command>unset wait_key<enter><shell-escape>$TRM/mutt/mutt-notmuch-py ~/.mail/temporary/search<enter><change-folder-readonly>+temporary/search<enter>" "search mail (using notmuch)"

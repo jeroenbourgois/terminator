@@ -2,12 +2,11 @@
 
 set from      = "Jeroen Bourgois <jeroen.bourgois@antenno.be>"
 set sendmail  = "/usr/local/bin/msmtp -a antenno"
+set signature = $TRM/mutt/accounts/antenno/signature
 
 # Other special folders.
 set mbox      = "+antenno/archive"
 set postponed = "+antenno/drafts"
-
-color status cyan default
 
 # GMail Macros ---------------------------------------
 macro index,pager A "<save-message>=antenno/archive<enter>" "Archive Message"
