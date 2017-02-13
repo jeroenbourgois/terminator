@@ -6,32 +6,10 @@ filetype off  " required!
 Plugin 'chriskempson/base16-vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'easymotion/vim-easymotion'
-
-" test
-Plugin 'slashmili/alchemist.vim'
-Plugin 'majutsushi/tagbar'
+Plugin 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 set cursorline
-
-" ctags test
-let g:tagbar_type_elixir = {
-    \ 'ctagstype' : 'elixir',
-    \ 'kinds' : [
-        \ 'f:functions',
-        \ 'functions:functions',
-        \ 'c:callbacks',
-        \ 'd:delegates',
-        \ 'e:exceptions',
-        \ 'i:implementations',
-        \ 'a:macros',
-        \ 'o:operators',
-        \ 'm:modules',
-        \ 'p:protocols',
-        \ 'r:records'
-    \ ]
-\ }
-nmap <F8> :TagbarToggle<CR>
 
 " spelling color
 " hi clear SpellBad

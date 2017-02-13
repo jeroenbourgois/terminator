@@ -202,6 +202,12 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ##########################################################
 
+# Qt
+
+export PATH="/usr/local/opt/qt5/bin:$PATH"
+
+##########################################################
+
 # GRUNT
 if have grunt; then
   eval "$(grunt --completion=zsh)"
