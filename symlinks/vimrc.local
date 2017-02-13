@@ -9,10 +9,7 @@ Plugin 'easymotion/vim-easymotion'
 
 " test
 Plugin 'slashmili/alchemist.vim'
-<<<<<<< HEAD
 Plugin 'majutsushi/tagbar'
-=======
->>>>>>> 8f70cbe7954df5c30984c77397fa55192f229df6
 
 filetype plugin indent on
 set cursorline
