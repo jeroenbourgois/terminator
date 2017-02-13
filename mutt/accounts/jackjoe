@@ -1,0 +1,48 @@
+set from      = "Jeroen Bourgois <jeroen@jackjoe.be>"
+set sendmail  = "/usr/local/bin/msmtp -a jeroen@jackjoe.be"
+
+# Other special folders.
+set mbox      = "+jeroen-jackjoe.be/archive"
+set postponed = "+jeroen-jackjoe.be/drafts"
+
+color status green default
+
+# GMail Macros ---------------------------------------
+bind  editor <space> noop
+bind  index,pager c mail #Compose
+macro index,pager A "<save-message>=jeroen-jackjoe.be/archive<enter>" "Archive Message"
+bind  generic     x  tag-entry		 # select conversation
+bind  index       x  tag-thread	   # select conversation
+bind  pager       x  tag-message   # select conversation
+bind  index,pager s  flag-message  # star a message
+macro index,pager !  <save-message>=jeroen-jackjoe.be/spam<enter><enter> "Report spam"
+bind  index,pager \# delete-thread # delete
+bind  index,pager l  copy-message	 # label
+bind  index,pager V  save-message  # move to
+macro index,pager I  <set-flag>O	 "Mark as read"
+macro index,pager U  <clear-flag>O "Mark as unread"
+macro index gi "<change-folder>=jeroen-jackjoe.be/INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=jeroen-jackjoe.be/archive<enter>" "Go to all mail"
+macro index gd "<change-folder>=jeroen-jackjoe.be/drafts<enter>" "Go to drafts"
+macro index gs "<change-folder>=jeroen-jackjoe.be/starred<enter>"	"Go to 'Starred'"
+folder-hook +jeroen-jackjoe.be/INBOX 'macro index,pager y "<save-message>=jeroen-jackjoe.be/archive<enter><enter>" "Archive conversation"'
+
+# GMail Macros ---------------------------------------
+bind  editor <space> noop
+bind  index,pager c mail #Compose
+bind  generic     x  tag-entry		 # select conversation
+bind  index       x  tag-thread	   # select conversation
+bind  pager       x  tag-message   # select conversation
+bind  index,pager s  flag-message  # star a message
+bind  index,pager \# delete-thread # delete
+bind  index,pager l  copy-message	 # label
+bind  index,pager V  save-message  # move to
+macro index,pager I  <set-flag>O	 "Mark as read"
+macro index,pager U  <clear-flag>O "Mark as unread"
+macro index,pager !  <save-message>=jeroen-jackjoe.be/spam<enter><enter> "Report spam"
+macro index gi "<change-folder>=jeroen-jackjoe.be/INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=jeroen-jackjoe.be/archive<enter>" "Go to all mail"
+macro index gd "<change-folder>=jeroen-jackjoe.be/drafts<enter>" "Go to drafts"
+macro index gs "<change-folder>=jeroen-jackjoe.be/starred<enter>"	"Go to 'Starred'"
+macro index,pager A "<save-message>=jeroen-jackjoe.be/archive<enter>" "Archive Message"
+folder-hook +jeroen-jackjoe.be/INBOX 'macro index,pager y "<save-message>=jeroen-jackjoe.be/archive<enter><enter>" "Archive conversation"'
