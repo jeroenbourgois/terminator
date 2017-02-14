@@ -28,7 +28,7 @@ nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
                             }.get(folder, folder)
 
 [Repository jeroen-jackjoe.be-remote]
-maxconnections = 2
+maxconnections = 5
 type = Gmail
 remoteuser = jeroen@jackjoe.be
 remotepasseval = get_keychain_pass(account="jeroen@jackjoe.be", server="imap.gmail.com")

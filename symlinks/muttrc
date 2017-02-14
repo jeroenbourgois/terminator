@@ -173,7 +173,7 @@ bind  index       x  tag-thread	   # select conversation
 bind  pager       x  tag-message   # select conversation
 bind  index,pager s  flag-message  # star a message
 bind  index,pager \# delete-thread # delete
-bind  index,pager l  copy-message	 # label
+# bind  index,pager l  copy-message	 # label
 bind  index,pager V  save-message  # move to
 macro index,pager I  <set-flag>O	 "Mark as read"
 macro index,pager U  <clear-flag>O "Mark as unread"
