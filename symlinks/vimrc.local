@@ -6,6 +6,7 @@ filetype off  " required!
 Plugin 'chriskempson/base16-vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'easymotion/vim-easymotion'
+Pluing 'better-indent-support-for-php-with-html'
 Plugin 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
@@ -20,10 +21,6 @@ set cursorline
 " wrap line in paragraph
 :vmap <leader>p <S-S><p>
 
-" if $TMUX == ''
-"   set clipboard+=unnamed
-" endif
-
 " Vim numbertoggle
 let g:NumberToggleTrigger="<C-l>"
 
@@ -33,14 +30,3 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
-
-" == System ====================================================================
-
-if has("unix")
-  let s:uname = system("uname")
-
-  if s:uname == "Darwin\n"
-
-  endif
-endif
-
