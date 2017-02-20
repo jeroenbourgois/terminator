@@ -19,14 +19,12 @@ if [[ $OS == 'OSX' ]]; then
 fi
 
 alias termieter="cd $TRM"
-alias termietere="cd $TRM; vim ."
+alias termietere="cd $TRM; vim"
 
 alias vimd="cd ~/.vim"
-alias vime="cd ~/.vim; vim ."
+alias vime="cd ~/.vim; vim"
 
-alias hype="vim ~/.hyperterm.js"
-
-alias v='vim .'
+alias v='vim'
 alias vi='vim'
 
 alias ping='echoo "ping -c 5"; ping -c 5' # ping 5 times ‘by default’
