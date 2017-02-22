@@ -9,6 +9,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'better-indent-support-for-php-with-html'
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'lambdatoast/elm.vim'
+
 filetype plugin indent on
 set cursorline
 
