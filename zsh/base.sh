@@ -115,13 +115,13 @@ alias tl='tmux ls'
 
 test "$(uname -s)" = "Darwin" && tmux_wrapper=reattach-to-user-namespace
 
-# function tt-mail() {
-#   tmux has-session -t mutt 2>/dev/null
-#
-#   if [ "$?" -eq 1 ] ; then
-#     tmux new-session -d -s "mutt" "$tmux_wrapper -l $SHELL"
-#   fi
-# }
+function tt-mail() {
+  tmux has-session -t mutt 2>/dev/null
+
+  if [ "$?" -eq 1 ] ; then
+    tmux new-session -d -s "mutt" "$tmux_wrapper -l $SHELL"
+  fi
+}
 
 function tt() {
   # tt-mail
@@ -143,28 +143,6 @@ function tt() {
 
 # for tmux: export 256color
 [ -n "$TMUX" ] && export TERM=screen-256color
-
-##########################################################
-
-# RBENV
-if have rbenv; then
-  eval "$(rbenv init -)"
-else
-  if [ -s "~/.rbenv/bin" ]; then
-    export PATH="~/.rbenv/bin:$PATH"
-
-    eval "$(rbenv init -)"
-  elif [ -s "/usr/local/rbenv/bin" ]; then
-    export PATH="/usr/local/rbenv/bin:$PATH"
-
-    eval "$(rbenv init -)"
-  fi
-fi
-##########################################################
-
-# PHP
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
 
 ##########################################################
 
@@ -203,12 +181,5 @@ export PATH="$HOME/.local/bin:$PATH"
 # Qt
 
 export PATH="/usr/local/opt/qt5/bin:$PATH"
-
-##########################################################
-
-# GRUNT
-if have grunt; then
-  eval "$(grunt --completion=zsh)"
-fi
 
 ##########################################################

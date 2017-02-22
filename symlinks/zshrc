@@ -56,8 +56,7 @@ setopt share_history
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
 # System
-plugins=(gitfast urltools cp rsync)
-# plugins=(ansible vagrant mosh docker)
+plugins=(gitfast urltools cp rsync ansible)
 
 # Programming
 plugins+=(composer npm cabal go node laravel5)
@@ -85,7 +84,7 @@ zstyle ':completion:*:default'            list-colors ${(s.:.)LS_COLORS}
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-# setopt extended_glob
+setopt extended_glob
 
 source $TRM/zsh/base.sh
 
@@ -95,3 +94,4 @@ BASE16_SHELL=$TRM/colours/base16-shell/
 
 alias reload!='. ~/.zshrc'
 export PATH="/usr/local/opt/qt5/bin:$PATH"
+
