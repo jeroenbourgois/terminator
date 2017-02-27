@@ -6,7 +6,7 @@ filetype off  " required!
 Plugin 'chriskempson/base16-vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'better-indent-support-for-php-with-html'
+Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'lambdatoast/elm.vim'
