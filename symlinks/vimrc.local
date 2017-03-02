@@ -8,12 +8,12 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'easymotion/vim-easymotion'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'Valloric/YouCompleteMe'
-
 Plugin 'lambdatoast/elm.vim'
 
 filetype plugin indent on
-set cursorline
-
+" set cursorline
+" hi CursorLine cterm=NONE ctermfg=0 ctermbg=18
+" highlight CursorLine ctermbg=18
 " spelling color
 " hi clear SpellBad
 " hi SpellBad cterm=underline ctermfg=LightRed term=reverse
