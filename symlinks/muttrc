@@ -52,7 +52,8 @@ set forward_format      = "Fwd: %s"                                    # when fo
 set reply_regexp        = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 set fast_reply                                                         # do not ask for to, subject, etc when replying
 auto_view text/html                                                    # autoview html
-alternative_order text/plain text/enriched text/html                   # save html for last
+# alternative_order text/plain text/enriched text/html                 # save html for last
+# alternative_order text/enriched text/plain text/html text
 
 # Compose View Options -------------------------------
 set realname = "Jeroen Bourgois"     # who am i?
