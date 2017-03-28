@@ -7,7 +7,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'easymotion/vim-easymotion'
 Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'lambdatoast/elm.vim'
 
 filetype plugin indent on
