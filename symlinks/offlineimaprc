@@ -7,13 +7,11 @@ fsync = False
 [Account jeroen-jackjoe.be]
 localrepository = jeroen-jackjoe.be-local
 remoterepository = jeroen-jackjoe.be-remote
-status_backend = sqlite
 postsynchook = notmuch new
 
 [Account antenno]
 localrepository = antenno-local
 remoterepository = antenno-remote
-status_backend = sqlite
 postsynchook = notmuch new
 
 [Repository jeroen-jackjoe.be-local]
