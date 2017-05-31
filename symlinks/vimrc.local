@@ -8,7 +8,7 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'easymotion/vim-easymotion'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plugin 'lambdatoast/elm.vim'
+Plugin 'matchit.zip'
 " Plugin 'ternjs/tern_for_vim', { 'do': 'npm install' }
 
 filetype plugin indent on
