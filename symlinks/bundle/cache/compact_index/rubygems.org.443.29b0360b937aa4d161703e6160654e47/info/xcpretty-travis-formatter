@@ -1,0 +1,5 @@
+---
+0.0.1 xcpretty:>= 0.0.7&~> 0.1|checksum:f0777179c224f222737b7567e334e8e91dc14f92a90d6bdfaf58af3571993b7f
+0.0.2 xcpretty:>= 0.0.7&~> 0.1|checksum:1819f86f07a9ea021f1d17be3004c1e640bb6af636c769ec3c0eb8d394b3cb5a
+0.0.3 xcpretty:>= 0.0.7&~> 0.1|checksum:248f6153b8303f5d388d20b770a9ed844797af8c9b8e57d6f15e347aee7fbfca
+0.0.4 xcpretty:>= 0.0.7&~> 0.2|checksum:42c7b603453f0d3a17add81d3c65dd81d958f4bc439b553c625306253bbbc5f2,ruby:~> 2.0

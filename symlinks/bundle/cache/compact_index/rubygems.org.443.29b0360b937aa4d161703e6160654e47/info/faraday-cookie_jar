@@ -1,0 +1,7 @@
+---
+0.0.1 cookiejar:>= 0,faraday:>= 0.7.4|checksum:ff6dd160cbbab21c11f41519f6131ffe9a27b01ddb9736cd1c61f0d2bc5f14b4
+0.0.2 cookiejar:>= 0,faraday:>= 0.7.4|checksum:46f1fc1ddc86682407ff932b84259b9c108624da081d54b93321c371fca0d7cf
+0.0.3 faraday:>= 0.7.4,http-cookie:~> 1.0.0|checksum:6828504452478551043a8d638bb6887652f5e504a562131ed3b9c1dde5748ef7
+0.0.4 faraday:>= 0.7.4,http-cookie:~> 1.0.0|checksum:acdbd3fbc8fd3362a1ddeb636d2e69e5c710861aba28f13e05089be05a5b36e5
+0.0.5 faraday:< 0.9.0&>= 0.7.4,http-cookie:~> 1.0.0|checksum:4899c0d105fda11bad6e82597452e555f303f9217fa6bef868761b466001bade
+0.0.6 faraday:>= 0.7.4,http-cookie:~> 1.0.0|checksum:66c7d899faa821bfb166dd93b5f928b184324b4dc7c89b67fb4619424c7f24b6

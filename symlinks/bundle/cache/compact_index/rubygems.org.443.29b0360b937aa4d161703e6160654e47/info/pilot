@@ -1,0 +1,39 @@
+---
+0.1.1 credentials_manager:>= 0.3.0,fastlane_core:>= 0.7.2|checksum:328855b2093828aaa8cc98656dffaf228e87762e778b45d3091a81b7f1cef057,ruby:>= 2.0.0
+0.1.2 credentials_manager:>= 0.3.0,fastlane_core:>= 0.9.2,spaceship:>= 0.3.0,terminal-table:~> 1.4.5|checksum:ac4eb5df038338ee5c7d350073f9c14939e341d75e3540633b0188f89c173a87,ruby:>= 2.0.0
+0.1.3 credentials_manager:>= 0.3.0,fastlane_core:>= 0.9.2,spaceship:>= 0.3.0,terminal-table:~> 1.4.5|checksum:c9ea0be83d9195a5548d8a3345dbd7220957eec6a5b95d196398c7f62da00743,ruby:>= 2.0.0
+0.1.4 credentials_manager:>= 0.3.0,fastlane_core:>= 0.9.2,spaceship:>= 0.3.1,terminal-table:~> 1.4.5|checksum:5f1643376a9bc55191f64ed35ea738ccdf653f5ec4d16ef518339868468efefb,ruby:>= 2.0.0
+0.1.5 credentials_manager:>= 0.3.0,fastlane_core:>= 0.9.2,spaceship:>= 0.3.1,terminal-table:~> 1.4.5|checksum:a7f83573008a5415f023fdef4cf16f7237800c9bcd2f56a488c4c6b9bdae8fb6,ruby:>= 2.0.0
+0.1.6 credentials_manager:>= 0.3.0,fastlane_core:>= 0.9.2,spaceship:>= 0.3.1,terminal-table:~> 1.4.5|checksum:f4195c3fd73566601f5cda3bd0f4205357ed910fc4afc528be22fcc3c154788d,ruby:>= 2.0.0
+0.1.7 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.0,spaceship:>= 0.6.0,terminal-table:~> 1.4.5|checksum:ba5b7985691bcb01e5504fc72ed4b1c6d682e54cc06df6e2ac1c7b48c31aaa57,ruby:>= 2.0.0
+0.2.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.1,spaceship:>= 0.6.0,terminal-table:~> 1.4.5|checksum:aa5e20faeadc130826b9093ffcba1a0a12ad81786b4db3bba7d10eadd214de2f,ruby:>= 2.0.0
+0.2.1 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.1,spaceship:< 1.0.0&>= 0.7.0,terminal-table:~> 1.4.5|checksum:8965e781ca561d2b142fc680e8e89aaf72ace591998b44edc82c8a657f468448,ruby:>= 2.0.0
+0.2.2 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.1,spaceship:< 1.0.0&>= 0.7.0,terminal-table:~> 1.4.5|checksum:9203661765aa9bfec4c39985bb95e7f113ba68c914dd01295d249ed3735e56b7,ruby:>= 2.0.0
+0.2.3 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.1,spaceship:< 1.0.0&>= 0.7.0,terminal-table:~> 1.4.5|checksum:ed6c11c3bdf3e048ea2745127d2bbacce10160fe69aa7ade29208573ab2c3866,ruby:>= 2.0.0
+0.3.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.1,spaceship:< 1.0.0&>= 0.12.0,terminal-table:~> 1.4.5|checksum:59e1c93079c595bfe51c74a8a21241edc98f6fa809ff4a78f0d0071c27ced78a,ruby:>= 2.0.0
+1.0.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.1,spaceship:< 1.0.0&>= 0.12.0,terminal-table:~> 1.4.5|checksum:d8613b0e23337c35c19f3480bbcff5f972d6b12bfaa600d0595c58179ed5466d,ruby:>= 2.0.0
+1.0.1 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.1,spaceship:< 1.0.0&>= 0.14.0,terminal-table:~> 1.4.5|checksum:9642b06be01440bd0f5f7fd08d9493e1f8aca2178b080dd255d653fa6b4dd55e,ruby:>= 2.0.0
+1.1.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.1,spaceship:< 1.0.0&>= 0.15.1,terminal-table:~> 1.4.5|checksum:df1b45820de7b9a10fe6595843630757683321ba8e932a83b7e65bc96a516d72,ruby:>= 2.0.0
+1.2.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.16.1,spaceship:< 1.0.0&>= 0.16.0,terminal-table:~> 1.4.5|checksum:abda09bb76d1f69d6706a8cd7fc1bbc39e493a289f302106358b60044707230b,ruby:>= 2.0.0
+1.2.1 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.31.0,spaceship:< 1.0.0&>= 0.16.0,terminal-table:~> 1.4.5|checksum:201cc7ffb3fe1ec0994b9e89610466da67f0ccc2027cf6d2aabc26be37633c91,ruby:>= 2.0.0
+1.3.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.31.0,spaceship:< 1.0.0&>= 0.16.0,terminal-table:~> 1.4.5|checksum:c6d956ce6032c06eb1940fb8f196d8ba960e709f6be1590752f82db720365432,ruby:>= 2.0.0
+1.4.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.36.5,spaceship:< 1.0.0&>= 0.20.0,terminal-table:~> 1.4.5|checksum:b1ef86232d40074c0cdf3565b9f8e70cfacd452c8956a77256e0a56d55e6147e,ruby:>= 2.0.0
+1.4.1 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.36.5,spaceship:< 1.0.0&>= 0.20.0,terminal-table:~> 1.4.5|checksum:8289b77ef024de9c411e89958814c0be8981cc91c2163794d55e0c53f545e969,ruby:>= 2.0.0
+1.5.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.41.2,spaceship:< 1.0.0&>= 0.24.1,terminal-table:~> 1.4.5|checksum:f59ef4987c5242b34d14e6467fdabffebb8eb2dec1e9363be32f497a039f0b44,ruby:>= 2.0.0
+1.5.1 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.41.2,spaceship:< 1.0.0&>= 0.24.1,terminal-table:~> 1.4.5|checksum:d346fbf822a5f2417346bb2d5cb2968a0ac687bddcd7a89a09e511663c3e27ef,ruby:>= 2.0.0
+1.6.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.41.2,spaceship:< 1.0.0&>= 0.27.0,terminal-table:~> 1.4.5|checksum:d773bc79a8c8830e542690fb99c9fba2bb537108df3ca28c5e7e6c078e9b0b48,ruby:>= 2.0.0
+1.7.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.41.2,spaceship:< 1.0.0&>= 0.27.0,terminal-table:~> 1.4.5|checksum:4b26b669df4d09cbc2a6c1f71d5c0752918467c792cebfee1f115b0c6ac6f5de,ruby:>= 2.0.0
+1.8.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.41.2,spaceship:< 1.0.0&>= 0.27.0,terminal-table:~> 1.4.5|checksum:d015351e440d1e4c264d5c5256ad0ab8c32dd711a6bc533ba2ddc47448b36cc2,ruby:>= 2.0.0
+1.9.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.41.2,spaceship:< 1.0.0&>= 0.27.0,terminal-table:~> 1.4.5|checksum:795db3cd06a0e2c72f1be1bd5a145953251d12bec4f54c0a9a67cfbe64b1f476,ruby:>= 2.0.0
+1.9.1 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.46.2,spaceship:< 1.0.0&>= 0.27.0,terminal-table:~> 1.4.5|checksum:f9ef4a8553069de9bed25581fbb8a02fadf9096e1c85b6c4cf097b3e7489aa8c,ruby:>= 2.0.0
+1.9.2 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.46.2,spaceship:< 1.0.0&>= 0.27.0,terminal-table:~> 1.4.5|checksum:4fe2eef79c25966b19d75ea32bb05a7845801ea93f4227c096e759c0cda867d0,ruby:>= 2.0.0
+1.10.0 credentials_manager:>= 0.3.0,fastlane_core:< 1.0.0&>= 0.46.2,spaceship:< 1.0.0&>= 0.29.0,terminal-table:~> 1.4.5|checksum:d9159ac9fe0e5bbd5ad91139cb793900d39b615e573ebcecf7be879c7b09421a,ruby:>= 2.0.0
+1.10.1 credentials_manager:>= 0.16.0,fastlane_core:< 1.0.0&>= 0.52.1,spaceship:< 1.0.0&>= 0.34.2,terminal-table:~> 1.4.5|checksum:963a3f14a4f4e83804bb936b9d88143e8bc1869e84e39aae447a68856167c7d4,ruby:>= 2.0.0
+1.11.0 credentials_manager:>= 0.16.0,fastlane_core:< 1.0.0&>= 0.52.3,spaceship:< 1.0.0&>= 0.36.0,terminal-table:< 2.0.0&>= 1.4.5|checksum:6fe48417d1338fd79d3142156cb440a17d661e87d3a9787d6aba4348038c66c5,ruby:>= 2.0.0
+1.11.1 credentials_manager:>= 0.16.0,fastlane_core:< 1.0.0&>= 0.53.0,spaceship:< 1.0.0&>= 0.36.2,terminal-table:< 2.0.0&>= 1.4.5|checksum:b65450970249c6ca069816af63c433b13e42d7be90882755dd42c3ea5265bfa5,ruby:>= 2.0.0
+1.11.2 credentials_manager:>= 0.16.0,fastlane_core:< 1.0.0&>= 0.53.0,spaceship:< 1.0.0&>= 0.36.2,terminal-table:< 2.0.0&>= 1.4.5|checksum:23da6a7ad0f2552bdbebf6f8d729cfd75fc694568fb325907c477815d855380f,ruby:>= 2.0.0
+1.12.0 credentials_manager:>= 0.16.0,fastlane_core:< 1.0.0&>= 0.53.0,spaceship:< 1.0.0&>= 0.37.0,terminal-table:< 2.0.0&>= 1.4.5|checksum:1eae1e030b5c9453b915c33f71969323f05a4ab884a2cd065ee840369c367ac2,ruby:>= 2.0.0
+1.12.1 credentials_manager:>= 0.16.0,fastlane_core:< 1.0.0&>= 0.56.0,spaceship:< 1.0.0&>= 0.37.0,terminal-table:< 2.0.0&>= 1.4.5|checksum:00dbe1d2036f2571ca09fddae02d87ae37a368ead4fb2ac2d18641affddd72e7,ruby:>= 2.0.0
+1.13.0 credentials_manager:>= 0.16.0,fastlane_core:< 1.0.0&>= 0.60.0,spaceship:< 1.0.0&>= 0.39.0,terminal-table:< 2.0.0&>= 1.4.5|checksum:5ed9d863151720603e98106529eaa2eece07ac34becd902c8cb7f411b8ecb2c5,ruby:>= 2.0.0
+1.13.1 credentials_manager:>= 0.16.0,fastlane_core:< 1.0.0&>= 0.60.0,spaceship:< 1.0.0&>= 0.39.0,terminal-table:< 2.0.0&>= 1.4.5|checksum:7c3c087542b76fda53699bfbfe85e8e8ca297dde0d80ffbd1fa4cb404a5ceb93,ruby:>= 2.0.0
+2.0.0 fastlane:< 3.0.0&>= 2.0.0,terminal-table:< 2.0.0&>= 1.4.5|checksum:f48778511f24f667992c4f3f41c14129bc042c6de265f710b5a4240b1939293d,ruby:>= 2.0.0
