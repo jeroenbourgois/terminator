@@ -7,9 +7,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'easymotion/vim-easymotion'
 Plugin '2072/PHP-Indenting-for-VIm'
-" Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plugin 'lambdatoast/elm.vim'
-Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plugin 'matchit.zip'
 " Plugin 'ternjs/tern_for_vim', { 'do': 'npm install' }
 

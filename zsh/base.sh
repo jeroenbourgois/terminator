@@ -9,9 +9,7 @@ have() {
 }
 
 ##########################################################
-
-alias ls='ls $LS_OPT' # long list, excludes dot files
-alias ll='ls $LS_OPT -GlhA' # long list all, includes dot files
+alias ls='ls $LS_OPT' # long list, excludes dot files alias ll='ls $LS_OPT -GlhA' # long list all, includes dot files
 alias l='ls $LS_OPT -1AFC'
 
 if [[ $OS == 'OSX' ]]; then
@@ -38,8 +36,12 @@ alias repos="cd $HOME/Work/repos/"
 alias jackjoe="cd $HOME/Work/jackjoe/"
 alias dev="cd $HOME/Work/devel/"
 alias gogo="cd $HOME/Work/go"
+alias elixird="cd $HOME/Work/elixir"
 
 alias largest_files='sudo du -ha / | sort -n -r | head -n 10'
+
+export EDITOR=vim
+export REACT_EDITOR=atom
 
 ##########################################################
 
@@ -189,3 +191,13 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="/usr/local/opt/qt5/bin:$PATH"
 
 ##########################################################
+
+# Ruby
+
+##########################################################
+
+# export PATH="$HOME/.gems:$PATH"
+# export PATH="$HOME/.gems/ruby/2.4.0/bin:$PATH"
+
+# RBENV
+eval "$(rbenv init -)"

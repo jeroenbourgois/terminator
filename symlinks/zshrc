@@ -5,7 +5,7 @@ export ZSH=$TRM/zsh/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="bira"
+ZSH_THEME="robbyrussell"
 
 if [[ $OS == 'OSX' ]]; then
   # ZSH_THEME="bira"
