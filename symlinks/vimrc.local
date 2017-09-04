@@ -5,18 +5,11 @@ filetype off  " required!
 
 Plugin 'chriskempson/base16-vim'
 Plugin 'easymotion/vim-easymotion'
-" Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
-" Plugin 'matchit.zip'
-" Plugin 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plugin 'lambdatoast/elm.vim'
+Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 filetype plugin indent on
-" set cursorline
-" hi CursorLine cterm=NONE ctermfg=0 ctermbg=18
-" highlight CursorLine ctermbg=18
-" spelling color
-" hi clear SpellBad
-" hi SpellBad cterm=underline ctermfg=LightRed term=reverse
-"
+
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -31,9 +24,6 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " wrap line in paragraph
 :vmap <leader>p <S-S><p>
-
-" Vim numbertoggle
-" let g:NumberToggleTrigger="<C-l>"
 
 " == Colours ===================================================================
 

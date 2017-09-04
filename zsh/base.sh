@@ -178,6 +178,12 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ##########################################################
 
+# Fastlane
+
+export PATH="$HOME/.fastlane/bin:$PATH"
+
+##########################################################
+
 # Qt
 
 export PATH="/usr/local/opt/qt5/bin:$PATH"
