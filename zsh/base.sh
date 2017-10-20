@@ -64,8 +64,8 @@ if [[ $OS == 'OSX' ]]; then
   alias mysql-restart='mysql-stop | mysql-start'
 
   # APACHE
-  alias apache-vhosts='sudo vim /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf'
-  alias apache24-config='sudo vim /usr/local/etc/apache2/2.4/httpd.conf'
+  alias apache-vhosts='sudo vim /usr/local/etc/httpd/extra/httpd-vhosts.conf'
+  alias apache-config='sudo vim /usr/local/etc/httpd/httpd.conf'
 else
   function list-services() {
     chkconfig --list | grep '3:on'
