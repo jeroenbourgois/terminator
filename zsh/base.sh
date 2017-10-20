@@ -200,4 +200,6 @@ export PATH="/usr/local/opt/qt5/bin:$PATH"
 # export PATH="$HOME/.gems/ruby/2.4.0/bin:$PATH"
 
 # RBENV
-eval "$(rbenv init -)"
+if have rbenv; then
+  eval "$(rbenv init -)"
+fi
