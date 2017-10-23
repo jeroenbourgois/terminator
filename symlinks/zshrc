@@ -95,3 +95,5 @@ BASE16_SHELL=$TRM/colours/base16-shell/
 alias reload!='. ~/.zshrc'
 export PATH="/usr/local/opt/qt5/bin:$PATH"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

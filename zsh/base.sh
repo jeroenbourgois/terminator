@@ -45,6 +45,10 @@ export REACT_EDITOR=atom
 
 ##########################################################
 
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
+##########################################################
+
 if [[ $OS == 'OSX' ]]; then
   alias cwd='echoo "pwd | pbcopy"; pwd | pbcopy'
 

@@ -26,9 +26,11 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " wrap line in paragraph
 :vmap <leader>p <S-S><p>
 
+nmap , :Buffers<CR>
+
 " == Colours ===================================================================
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+" if filereadable(expand("~/.vimrc_background"))
+  " let base16colorspace=256
+  " source ~/.vimrc_background
+" endif
