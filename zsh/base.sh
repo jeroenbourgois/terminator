@@ -64,8 +64,8 @@ if [[ $OS == 'OSX' ]]; then
   alias mysql-restart='mysql-stop | mysql-start'
 
   # APACHE
-  alias apache-vhosts='sudo vim /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf'
-  alias apache24-config='sudo vim /usr/local/etc/apache2/2.4/httpd.conf'
+  alias apache-vhosts='sudo vim /usr/local/etc/httpd/extra/httpd-vhosts.conf'
+  alias apache-config='sudo vim /usr/local/etc/httpd/httpd.conf'
 else
   function list-services() {
     chkconfig --list | grep '3:on'
@@ -171,6 +171,30 @@ export PATH="$HOME/.local/bin:$PATH"
 # ANDROID :(
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
+
+##########################################################
+
+# FZF
+
+# fzf via Homebrew
+if [ -e /usr/local/opt/fzf/shell/completion.zsh ]; then
+  source /usr/local/opt/fzf/shell/key-bindings.zsh
+  source /usr/local/opt/fzf/shell/completion.zsh
+fi
+
+# fzf via local installation
+if [ -e ~/.fzf ]; then
+  export PATH="$HOME/.fzf/bin:$PATH"
+  source ~/.fzf/shell/key-bindings.zsh
+  source ~/.fzf/shell/completion.zsh
+fi
+
+# fzf + ag configuration
+if have fzf && have ag; then
+  export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
 
 ##########################################################
 
