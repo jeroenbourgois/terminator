@@ -6,7 +6,7 @@ filetype off  " required!
 Plugin 'chriskempson/base16-vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'lambdatoast/elm.vim'
-Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 filetype plugin indent on
 
