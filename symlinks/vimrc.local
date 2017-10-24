@@ -6,10 +6,7 @@ filetype off  " required!
 Plugin 'chriskempson/base16-vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'lambdatoast/elm.vim'
-<<<<<<< HEAD
-=======
 Plugin 'Chiel92/vim-autoformat'
->>>>>>> 1cdcf0806cfda10a8a3130e08d3b9817480e4d59
 " Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 filetype plugin indent on
