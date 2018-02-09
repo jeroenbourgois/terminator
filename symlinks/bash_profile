@@ -11,3 +11,5 @@ for config_file in $TRM/bash/**/*.bash
 do
   source $config_file
 done
+
+export PATH="$HOME/.cargo/bin:$PATH"

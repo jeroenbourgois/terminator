@@ -7,7 +7,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'Chiel92/vim-autoformat'
-" Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 filetype plugin indent on
 
@@ -30,7 +29,7 @@ nmap , :Buffers<CR>
 
 " == Colours ===================================================================
 
-" if filereadable(expand("~/.vimrc_background"))
-  " let base16colorspace=256
-  " source ~/.vimrc_background
-" endif
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
