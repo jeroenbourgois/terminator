@@ -9,6 +9,7 @@ Plugin 'lambdatoast/elm.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 " Plugin 'Chiel92/vim-autoformat'
 " Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plugin 'Chiel92/vim-autoformat'
 
 filetype plugin indent on
 
