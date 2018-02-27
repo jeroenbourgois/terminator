@@ -6,7 +6,8 @@ filetype off  " required!
 Plugin 'chriskempson/base16-vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'lambdatoast/elm.vim'
-Plugin 'Chiel92/vim-autoformat'
+Plugin 'ludovicchabant/vim-gutentags'
+" Plugin 'Chiel92/vim-autoformat'
 " Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 filetype plugin indent on
@@ -15,12 +16,6 @@ filetype plugin indent on
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-let g:UltiSnipsUsePythonVersion = 3
 
 " == General ===================================================================
 
@@ -31,7 +26,7 @@ nmap , :Buffers<CR>
 
 " == Colours ===================================================================
 
-" if filereadable(expand("~/.vimrc_background"))
-  " let base16colorspace=256
-  " source ~/.vimrc_background
-" endif
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
